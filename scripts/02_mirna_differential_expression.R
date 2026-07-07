@@ -210,9 +210,9 @@ write_tsv(
 
 save_figure(
   plot_two_set_venn(
-    title = "miRNA differential-expression summary",
-    left_label = "IL-4 nominal P < 0.05",
-    right_label = "IL-13 nominal P < 0.05",
+    title = "miRNA differential-expression overlap",
+    left_label = "IL-4 nominal",
+    right_label = "IL-13 nominal",
     left_only = as.integer(observed["IL4_vs_Vehicle"] - observed["shared_same_direction"]),
     shared = as.integer(observed["shared_same_direction"]),
     right_only = as.integer(observed["IL13_vs_Vehicle"] - observed["shared_same_direction"]),

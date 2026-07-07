@@ -25,16 +25,21 @@ clean_text <- function(x) {
   x
 }
 
-public_experimental_result <- function(axis, target_type, evaluated) {
+public_experimental_result <- function(axis, target, target_type, evaluated) {
   axis <- clean_text(axis)
+  target <- clean_text(target)
   evaluated <- clean_text(evaluated)
   dplyr::case_when(
-    axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "mRNA" ~
+    axis == "miR-140-3p / CEMIP / circPAPPA" & target == "CEMIP" ~
       "strongest functional support; pursued further",
-    axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "circRNA" ~
+    axis == "miR-140-3p / CEMIP / circPAPPA" & target == "circPAPPA" ~
       "predicted circRNA partner; circPAPPA knockdown did not significantly alter CEMIP under tested conditions",
-    evaluated == "yes" & nzchar(axis) ~
-      "experimentally evaluated under the tested conditions",
+    axis == "miR-135b-5p / TNC / circLIFR" & target == "circLIFR" ~
+      "predicted circRNA partner in the prioritized miR-135b-5p/TNC axis",
+    axis == "miR-135b-5p / TNC / circLIFR" & target == "TNC" ~
+      "did not show the same supportive response as miR-140-3p/CEMIP under tested conditions",
+    axis == "miR-625-3p / LIFR" & target == "LIFR" ~
+      "did not show the same supportive response as miR-140-3p/CEMIP under tested conditions",
     TRUE ~ ""
   )
 }
@@ -50,7 +55,7 @@ network_public <- network |>
     prioritized_axis = clean_text(prioritized_axis),
     figure4D_focus = clean_text(figure4D_focus),
     experimentally_evaluated = clean_text(experimentally_evaluated),
-    experimental_result = public_experimental_result(prioritized_axis, target_type, experimentally_evaluated)
+    experimental_result = public_experimental_result(prioritized_axis, target, target_type, experimentally_evaluated)
   )
 
 write_tsv(

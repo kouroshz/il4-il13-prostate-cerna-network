@@ -175,13 +175,12 @@ write_tsv(
 
 save_figure(
   plot_two_set_venn(
-    title = "circRNA differential-expression summary",
+    title = "Upregulated circRNA overlap",
     left_label = "IL-4 upregulated",
     right_label = "IL-13 upregulated",
     left_only = as.integer(observed["IL4_up"] - observed["shared_up"]),
     shared = as.integer(observed["shared_up"]),
     right_only = as.integer(observed["IL13_up"] - observed["shared_up"]),
-    shared_note = "Shared upregulated",
     bottom_note = paste0("Downregulated circRNAs: IL-4 = ", observed["IL4_down"], "; IL-13 = ", observed["IL13_down"])
   ),
   "Figure_2A_circRNA_overlap",

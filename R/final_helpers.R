@@ -58,8 +58,8 @@ copy_if_newer <- function(from, to) {
 
 save_figure <- function(plot, stem, width = 6.5, height = 5.0, dpi = 300) {
   figure_dir <- ensure_dir(p("results", "figures"))
-  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".pdf")), plot, width = width, height = height, device = grDevices::cairo_pdf)
-  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".png")), plot, width = width, height = height, dpi = dpi)
+  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".pdf")), plot, width = width, height = height, device = grDevices::cairo_pdf, bg = "white")
+  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".png")), plot, width = width, height = height, dpi = dpi, bg = "white")
 }
 
 plot_two_set_venn <- function(
@@ -97,19 +97,22 @@ plot_two_set_venn <- function(
     ggplot2::annotate("text", x = -1.2, y = 1.48, label = left_label, size = 3.5, fontface = "bold") +
     ggplot2::annotate("text", x = 1.2, y = 1.48, label = right_label, size = 3.5, fontface = "bold") +
     ggplot2::scale_fill_manual(values = c(left = "#78a6d8", right = "#8fcb8f")) +
-    ggplot2::coord_equal(xlim = c(-2.5, 2.5), ylim = c(-1.75, 1.75), clip = "off") +
+    ggplot2::coord_equal(xlim = c(-2.5, 2.5), ylim = c(-2.05, 1.75), clip = "off") +
     ggplot2::labs(title = title) +
     ggplot2::theme_void(base_size = 11) +
     ggplot2::theme(
       legend.position = "none",
+      plot.background = ggplot2::element_rect(fill = "white", color = NA),
+      panel.background = ggplot2::element_rect(fill = "white", color = NA),
       plot.title = ggplot2::element_text(hjust = 0.5, face = "bold", size = 13),
-      plot.margin = ggplot2::margin(10, 18, 18, 18)
+      plot.margin = ggplot2::margin(10, 18, 28, 18)
     )
   if (!is.null(shared_note) && nzchar(shared_note)) {
-    g <- g + ggplot2::annotate("text", x = 0, y = -1.28, label = shared_note, size = 3.1, color = "grey25")
+    g <- g + ggplot2::annotate("text", x = 0, y = -1.52, label = shared_note, size = 3.1, color = "grey25")
   }
   if (!is.null(bottom_note) && nzchar(bottom_note)) {
-    g <- g + ggplot2::annotate("text", x = 0, y = -1.58, label = bottom_note, size = 3.0, color = "grey30")
+    note_y <- if (!is.null(shared_note) && nzchar(shared_note)) -1.80 else -1.58
+    g <- g + ggplot2::annotate("text", x = 0, y = note_y, label = bottom_note, size = 3.0, color = "grey30")
   }
   g
 }
@@ -195,8 +198,8 @@ plot_volcano <- function(
     g <- g + ggplot2::scale_y_continuous(limits = c(0, y_cap), expand = ggplot2::expansion(mult = c(0, 0.03)))
   }
   ensure_dir(dirname(out_pdf))
-  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2, device = grDevices::cairo_pdf)
-  ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300)
+  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2, device = grDevices::cairo_pdf, bg = "white")
+  ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300, bg = "white")
   invisible(g)
 }
 

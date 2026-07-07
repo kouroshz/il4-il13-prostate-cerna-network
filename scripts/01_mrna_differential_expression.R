@@ -158,9 +158,9 @@ write_tsv(
 
 save_figure(
   plot_two_set_venn(
-    title = "mRNA differential-expression summary",
-    left_label = "IL-4 nominally regulated",
-    right_label = "IL-13 nominally regulated",
+    title = "mRNA differential-expression overlap",
+    left_label = "IL-4 regulated",
+    right_label = "IL-13 regulated",
     left_only = as.integer(observed["IL4_vs_Vehicle"] - observed["shared_same_direction"]),
     shared = as.integer(observed["shared_same_direction"]),
     right_only = as.integer(observed["IL13_vs_Vehicle"] - observed["shared_same_direction"]),
