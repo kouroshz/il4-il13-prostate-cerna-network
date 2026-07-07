@@ -1,0 +1,3 @@
+assay	contrast	total_features	nominal_discovery	nominal_up	nominal_down	FDR_significant	FDR_up	FDR_down
+mRNA-seq	IL4_vs_Vehicle	13997	769	385	384	536	317	219
+mRNA-seq	IL13_vs_Vehicle	14013	697	359	338	445	281	164

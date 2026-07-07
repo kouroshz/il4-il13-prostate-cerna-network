@@ -1,0 +1,9 @@
+---
+title: "Limitations"
+---
+
+The omics analyses are exploratory candidate-generation screens. Nominal P-value thresholds were used to form broad candidate sets for network construction, while FDR values are reported transparently in complete tables.
+
+Many nominal-discovery features, especially miRNAs and circRNAs, do not survive correction for multiple testing. Predicted miRNA-target network edges are hypothesis-generating. Experimental evaluation was performed for selected candidates and produced both supportive and negative or inconclusive results.
+
+The strongest interpretation should be placed on interactions with independent functional support. The complete predicted circRNA-miRNA-mRNA competitive mechanism was not validated for every edge.

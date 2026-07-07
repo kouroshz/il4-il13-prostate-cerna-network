@@ -1,0 +1,9 @@
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+data/raw/
+results/tmp/
+*.log
+docs/_site/

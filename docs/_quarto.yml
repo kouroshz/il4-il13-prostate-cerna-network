@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "IL-4/IL-13 ceRNA Analysis"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - study_design.qmd
+      - mrna_analysis.qmd
+      - mirna_analysis.qmd
+      - circrna_analysis.qmd
+      - enrichment.qmd
+      - network_analysis.qmd
+      - reproducibility.qmd
+      - limitations.qmd
+
+format:
+  html:
+    toc: true
+    theme: cosmo

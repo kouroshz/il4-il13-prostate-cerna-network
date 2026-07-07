@@ -1,0 +1,10 @@
+sample_name	source_column	condition	biological_replicate	assay	statistical_unit	notes
+V_13	co_Vehicle_13	Vehicle	1	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+V_14	co_Vehicle_14	Vehicle	2	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+V_15	co_Vehicle_15	Vehicle	3	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL4_16	ca_IL4_16	IL4	1	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL4_17	ca_IL4_17	IL4	2	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL4_18	ca_IL4_18	IL4	3	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL13_19	ca_IL13_19	IL13	1	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL13_20	ca_IL13_20	IL13	2	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx
+IL13_21	ca_IL13_21	IL13	3	mRNA-seq	independently cultured and treated biological replicate	Compact count matrix column from featureCounts-derived all_counts.xlsx

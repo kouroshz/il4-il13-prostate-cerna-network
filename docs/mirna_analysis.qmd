@@ -1,0 +1,13 @@
+---
+title: "miRNA Analysis"
+---
+
+The final miRNA analysis uses verified CPM values transformed as log2(CPM + 1). IL-4-versus-Vehicle and IL-13-versus-Vehicle were tested using predefined two-sided Welch tests.
+
+Final counts:
+
+- IL-4 versus Vehicle: 19 nominal-discovery miRNAs and 0 FDR-significant miRNAs.
+- IL-13 versus Vehicle: 20 nominal-discovery miRNAs and 0 FDR-significant miRNAs.
+- Same-direction shared miRNAs: 4 nominal-discovery miRNAs and 0 FDR-significant miRNAs.
+
+miR-140-3p is modestly reduced after both cytokines, nominally significant after IL-4, not nominally significant after IL-13, not FDR significant, and not a threshold-defined discovery feature because it does not meet the 1.5-fold threshold. It is retained as biologically prioritized and experimentally supported.

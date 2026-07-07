@@ -1,0 +1,31 @@
+---
+title: "Reproducibility"
+---
+
+Run the workflow from the repository root:
+
+```sh
+Rscript run_all.R
+```
+
+The workflow executes:
+
+1. mRNA differential expression from the compact count matrix.
+2. miRNA differential expression from the compact CPM matrix.
+3. circRNA differential expression from the compact normalized-expression matrix.
+4. mRNA gprofiler2 enrichment.
+5. circRNA gprofiler2 enrichment.
+6. miRanda input checksum and mature-miRNA validation.
+7. miRanda output parsing and collapsed edge export.
+8. Restricted network table construction.
+9. Network plotting.
+
+The expected outputs are written to `data/processed/final/`, `results/final/`, and `sessionInfo.txt`.
+
+Quarto documentation can be rendered with:
+
+```sh
+quarto render docs
+```
+
+if Quarto is installed.

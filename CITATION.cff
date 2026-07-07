@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript and this software archive."
+title: "Reproducible IL-4/IL-13 ceRNA Network Analysis"
+type: software
+authors:
+  - family-names: "Macoska"
+    given-names: "Jill A."
+  - family-names: "Zarringhalam"
+    given-names: "Kourosh"
+  - family-names: "D'Arcy"
+    given-names: "Quentin"
+  - family-names: "Bowen"
+    given-names: "Delaney"
+repository-code: "https://github.com/REPLACE_WITH_FINAL_REPOSITORY_URL"
+license: "MIT"
+version: "1.0.0"
+date-released: "2026-07-03"
+keywords:
+  - IL-4
+  - IL-13
+  - ceRNA
+  - fibrosis
+  - mRNA-seq
+  - miRNA-seq
+  - circRNA

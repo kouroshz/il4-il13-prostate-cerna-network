@@ -1,0 +1,96 @@
+project:
+  name: IL4_IL13_scirep
+  final_results_source: compact_processed_inputs
+  rscript: Rscript
+
+thresholds:
+  nominal_p: 0.05
+  fold_change: 1.5
+  log2_fold_change: 0.5849625007211562
+  fdr: 0.05
+
+significance_classes:
+  nominal_discovery_mrna_circrna: assay-specific nominal P < 0.05 and absolute fold change >= 1.5
+  nominal_discovery_mirna: nominal two-sided Welch-test P < 0.05; candidate prioritization additionally uses directionality, integrated-network relevance, and experimental suitability
+  FDR_significant_mrna_circrna: Benjamini-Hochberg FDR < 0.05 and absolute fold change >= 1.5
+  FDR_significant_mirna: Benjamini-Hochberg FDR < 0.05
+  biologically_prioritized: selected using direction, predicted interaction, biological and fibrosis relevance, and suitability for experimental testing
+  experimentally_supported: supported by subsequent functional experiments
+  experimentally_not_supported: tested experimentally but did not produce the predicted response
+
+contrasts:
+  - IL4_vs_Vehicle
+  - IL13_vs_Vehicle
+
+samples:
+  vehicle:
+    - V_A
+    - V_B
+    - V_C
+  IL4:
+    - IL4_A
+    - IL4_B
+    - IL4_C
+  IL13:
+    - IL13_A
+    - IL13_B
+    - IL13_C
+
+mRNA:
+  compact_count_matrix: data/processed/mrna/all_counts.xlsx
+  final_output_dir: data/processed/final/mrna
+  model: edgeR GLM likelihood-ratio test
+  normalization: TMM
+  filtering: CPM > 1 in at least two samples
+  contrast_direction: Treatment minus Vehicle
+
+miRNA:
+  expression_matrix: data/processed/mirna/Expression_Browser_CPM.csv
+  final_output_dir: data/processed/final/mirna
+  transformation: log2(CPM + 1)
+  test: two-sided Welch t-test
+  contrast_direction: Treatment minus Vehicle
+
+circRNA:
+  normalized_matrix: data/processed/circrna/CircRNA_normalized_Data_KZ.xlsx
+  recovered_original_deg_tables:
+    IL4_vs_Vehicle: data/processed/circrna/circRNA_original_IL4_vs_Vehicle_DEG.tsv
+    IL13_vs_Vehicle: data/processed/circrna/circRNA_original_IL13_vs_Vehicle_DEG.tsv
+  provider_workbook: data/processed/circrna/Differentially_Expressed_CircRNAs_Arraystar_provider.xlsx
+  final_output_dir: data/processed/final/circrna
+  final_manuscript_source: recovered original circRNA DEG tables
+  internal_check_model: limma empirical Bayes
+  input_scale: normalized log2 expression
+  additional_log_transform: false
+  contrast_direction: Treatment minus Vehicle
+
+enrichment:
+  organism: hsapiens
+  sources:
+    - GO:MF
+    - GO:BP
+    - GO:CC
+    - KEGG
+  correction_method: g_SCS
+  use_custom_background: true
+
+miRanda:
+  version_target: v3.3a
+  score_threshold: 140
+  mature_mirna_query_sequences: data/processed/miranda_inputs
+  target_sequences: data/processed/miranda_inputs/all_3putr_circ.fa.txt
+  precomputed_outputs: data/processed/miranda_outputs
+  require_mature_mirna_rna_bases: true
+  coverage_scope: restricted historical selected fibrosis-related mRNA 3-prime UTR and circRNA target FASTA
+  complete_run_status: pending complete human mRNA 3-prime UTR resource and executable miRanda v3.3a binary
+
+networks:
+  canonical_scope: curated integrated IL-4/IL-13 fibrosis-focused candidate network
+  curated_integrated_network: data/processed/final/integrated_ceRNA_network_curated.tsv
+  supplementary_table_x: results/final/source_data/Supplementary_Table_integrated_ceRNA_network.tsv
+  treatment_specific_tables:
+    - data/processed/final/networks/restricted_historical_candidate_IL4_edges.tsv
+    - data/processed/final/networks/restricted_historical_candidate_IL13_edges.tsv
+  strict_shared_table: data/processed/final/networks/restricted_historical_candidate_strict_shared_edges.tsv
+  candidate_table: data/processed/final/networks/biologically_prioritized_candidate_edges.tsv
+  note: Curated integrated network TSV is the manuscript Figure 4D source; restricted historical R network tables are supporting provenance layers, not complete transcriptome-wide maps.

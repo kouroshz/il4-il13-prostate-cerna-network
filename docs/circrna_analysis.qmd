@@ -1,0 +1,13 @@
+---
+title: "circRNA Analysis"
+---
+
+Arraystar performed original circRNA microarray processing and normalization. The final reproducible Figure 2 analysis uses recovered original circRNA DEG tables standardized to Treatment-minus-Vehicle direction. Arraystar normalized log2 expression values are retained for heatmap source data.
+
+Final recovered-original workflow counts:
+
+- IL-4 versus Vehicle: 321 nominal-discovery circRNAs total, including 318 upregulated and 3 downregulated.
+- IL-13 versus Vehicle: 42 nominal-discovery circRNAs total, all upregulated.
+- Same-direction shared circRNAs: 25 upregulated nominal-discovery circRNAs.
+
+Arraystar provider-generated differential-expression subset results and a limma reanalysis are retained separately as provenance/internal checks, not as the primary Figure 2 count source.

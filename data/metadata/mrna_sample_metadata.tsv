@@ -1,0 +1,10 @@
+sample_id	group	count_file	notes
+13	Vehicle	data/raw/mrna_counts/13_counts.txt	FeatureCounts-style copied count file
+14	Vehicle	data/raw/mrna_counts/14_counts.txt	FeatureCounts-style copied count file
+15	Vehicle	data/raw/mrna_counts/15_counts.txt	FeatureCounts-style copied count file
+16	IL4	data/raw/mrna_counts/16_counts.txt	FeatureCounts-style copied count file
+17	IL4	data/raw/mrna_counts/17_counts.txt	FeatureCounts-style copied count file
+18	IL4	data/raw/mrna_counts/18_counts.txt	FeatureCounts-style copied count file
+19	IL13	data/raw/mrna_counts/19_counts.txt	FeatureCounts-style copied count file
+20	IL13	data/raw/mrna_counts/20_counts.txt	FeatureCounts-style copied count file
+21	IL13	data/raw/mrna_counts/21_counts.txt	FeatureCounts-style copied count file

@@ -1,0 +1,9 @@
+---
+title: "IL-4/IL-13 ceRNA Reproducible Analysis"
+---
+
+This site documents the reproducible computational workflow for the IL-4/IL-13 prostate stromal fibroblast ceRNA manuscript revision.
+
+The final analysis starts from compact processed mRNA count, miRNA CPM, and circRNA normalized-expression matrices. It recomputes differential expression, enrichment outputs, miRanda provenance tables, restricted historical candidate network tables, figures, and source-data files.
+
+Core interpretation: IL-4 and IL-13 induce strong mRNA remodeling, including FDR-significant induction of CEMIP, TNC, and LIFR. miR-140-3p is modestly and directionally reduced, and is treated as biologically prioritized and experimentally supported rather than as a threshold-defined shared discovery feature.

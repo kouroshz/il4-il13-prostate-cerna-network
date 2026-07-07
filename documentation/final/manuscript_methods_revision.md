@@ -1,0 +1,37 @@
+# Manuscript-Ready Methods Revisions
+
+## Experimental Design And Replication
+
+N1 prostate stromal fibroblasts were independently cultured and treated with Vehicle, IL-4, or IL-13. For mRNA-seq, miRNA-seq, and circRNA microarray profiling, each condition was represented by three independently cultured and treated biological replicates. The independently cultured and treated sample was the statistical unit, and each sequencing library or microarray corresponded to one biological replicate. Where technical measurements were obtained for validation assays, technical values should be averaged within the biological replicate before statistical testing. Technical-replicate details for miRNA knockdown, miRNA overexpression, western blot, qRT-PCR, RNA pulldown, and circPAPPA knockdown panels should be inserted from Jill's records.
+
+## mRNA-Seq Data Processing And Analysis
+
+mRNA-seq count matrices were analyzed using edgeR. Predefined pairwise contrasts compared IL-4 versus Vehicle and IL-13 versus Vehicle, with log fold changes expressed as Treatment minus Vehicle. Genes with CPM > 1 in at least two samples were retained, libraries were normalized using TMM, and negative-binomial generalized linear models were fit with likelihood-ratio tests for each treatment contrast. Nominal likelihood-ratio-test P values and Benjamini-Hochberg FDR values were retained for every tested Ensembl gene. Gene annotation was added after differential-expression testing, and statistical rows were not removed or duplicated because of many-to-one identifier mappings. Exploratory nominal-discovery genes were defined by nominal P < 0.05 and absolute fold change >= 1.5. FDR-significant genes were defined by BH FDR < 0.05 and absolute fold change >= 1.5.
+
+## miRNA-Seq Data Processing And Analysis
+
+miRNA expression was analyzed from the verified CPM expression matrix. CPM values were transformed as log2(CPM + 1). Predefined IL-4-versus-Vehicle and IL-13-versus-Vehicle comparisons were tested using two-sided Welch tests, with fold changes expressed as Treatment minus Vehicle. Nominal P values and Benjamini-Hochberg FDR values were reported for every miRNA. Exploratory nominal-discovery miRNAs were defined by nominal P < 0.05. Candidate miRNAs selected for follow-up were prioritized using directionality, integrated-network relevance, fibrosis biology, and experimental suitability rather than fold-change magnitude alone. FDR-significant miRNAs were defined by BH FDR < 0.05 and are reported for transparency.
+
+## circRNA Microarray Processing And Analysis
+
+Arraystar performed circRNA array processing and normalization and supplied normalized expression values. The final manuscript workflow uses the recovered original circRNA differential-expression tables that underlie the Figure 2 counts. Predefined IL-4-versus-Vehicle and IL-13-versus-Vehicle results were standardized to Treatment-minus-Vehicle direction. Exploratory nominal-discovery circRNAs were defined by nominal P < 0.05 and absolute fold change >= 1.5. Benjamini-Hochberg FDR values were calculated from the recovered P values and retained for transparency. The Arraystar provider differential-expression subset and a limma analysis of normalized log2 expression values were retained as provenance/internal check outputs, not as the primary Figure 2 count source.
+
+## Functional Enrichment Analysis
+
+Functional enrichment analyses were originally performed using the g:Profiler web interface. For the revised reproducible analysis, exact gene lists and assay-specific background sets were analyzed programmatically using the gprofiler2 R package. Gene Ontology Molecular Function, Biological Process, and Cellular Component terms and KEGG pathway annotations were evaluated using g:Profiler multiple-testing correction. mRNA enrichment used unique identifiers from upregulated nominal-discovery mRNAs and all mRNAs retained for testing as the background. circRNA enrichment used unique annotated host genes of upregulated nominal-discovery circRNAs and all unique host genes represented on the analyzed Arraystar platform as the background. Complete input lists, background sets, analysis parameters, and enrichment results are provided in the accompanying repository.
+
+## miRanda Interaction Prediction
+
+Predicted miRNA-target interactions were analyzed using miRanda v3.3a with a minimum alignment score of 140. Mature miRNA query FASTA files used RNA bases with U rather than T. Candidate target sequences included mRNA 3-prime UTR and circRNA sequences. Site-level miRanda predictions retained alignment score and hybridization energy. Multiple predicted sites for the same miRNA-target pair were collapsed to one edge using the most favorable, lowest hybridization energy, while retaining the number of predicted sites.
+
+## Network Construction And Candidate Prioritization
+
+Candidate ceRNA networks were constructed by integrating cytokine-regulated miRNAs, mRNAs, and circRNAs with miRanda-predicted miRNA-target interactions. Downregulated miRNAs were evaluated against upregulated mRNAs and circRNAs, and predicted interactions were retained using a minimum miRanda score threshold of 140. The IL-4 and IL-13 networks were integrated to identify shared or directionally concordant candidate interactions. Because the full predicted network contained many candidate interactions, a biologically focused subnetwork was generated by filtering for interactions connected to fibrosis-associated genes represented in the datasets, particularly CEMIP, TNC, and LIFR. This prioritization nominated candidate axes involving miR-140-3p/CEMIP/circPAPPA, miR-135b-5p/TNC/circLIFR, and miR-625-3p/LIFR for experimental evaluation. Network diagrams were generated in Cytoscape, and miRanda scores and predicted binding energies are provided in Supplementary Table X and the GitHub repository. Original coordinate-like fields from the integrated workbook were preserved in the source table but were not interpreted as coordinate fields pending Quentin confirmation.
+
+## General Statistical Analysis
+
+The omics analyses were exploratory candidate-generation screens. mRNA nominal-discovery features were defined by edgeR likelihood-ratio-test P < 0.05 and absolute fold change >= 1.5. circRNA nominal-discovery features were defined by recovered original workflow nominal P < 0.05 and absolute fold change >= 1.5. miRNA nominal-discovery features were defined by two-sided Welch-test P < 0.05, with candidate prioritization additionally using directionality, predicted interactions, fibrosis relevance, and experimental suitability. FDR values were calculated, retained, exported, and reported transparently, but FDR was not used as the primary gate for exploratory candidate generation. Nominal-discovery features should not be described as genome-wide or FDR significant unless they pass the reported FDR criterion.
+
+## Code And Data Availability
+
+Processed count matrices, normalized expression matrices, sample metadata, final differential-expression tables, enrichment inputs and outputs, miRanda input checksums and parsed predictions, the curated integrated ceRNA network table, Cytoscape-compatible network source tables, figure source-data tables, R scripts, configuration files, session information, and a one-command rerun workflow are provided in the accompanying repository. Raw sequencing and array data availability should be stated with the final SRA and GEO accessions supplied by the authors.

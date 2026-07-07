@@ -1,0 +1,11 @@
+node_id	node_type	label	treatment_membership	discovery_status	FDR_status	network_scope
+hsa-miR-140-3p	miRNA	hsa-miR-140-3p	IL4	nominal_discovery	not_FDR_significant	biologically_prioritized_candidate
+hsa-miR-140-3p	miRNA	hsa-miR-140-3p	IL13	not_threshold_defined	not_FDR_significant	biologically_prioritized_candidate
+hsa-miR-135b-5p	miRNA	hsa-miR-135b-5p	IL4	nominal_discovery	not_FDR_significant	biologically_prioritized_candidate
+hsa-miR-135b-5p	miRNA	hsa-miR-135b-5p	IL13	nominal_discovery	not_FDR_significant	biologically_prioritized_candidate
+hsa-miR-625-3p	miRNA	hsa-miR-625-3p	IL4	nominal_discovery	not_FDR_significant	biologically_prioritized_candidate
+ENSG00000103888	mRNA	CEMIP	IL4	FDR_significant	FDR_significant	biologically_prioritized_candidate
+ENSG00000103888	mRNA	CEMIP	IL13	FDR_significant	FDR_significant	biologically_prioritized_candidate
+ENSG00000041982	mRNA	TNC	IL4	FDR_significant	FDR_significant	biologically_prioritized_candidate
+ENSG00000041982	mRNA	TNC	IL13	FDR_significant	FDR_significant	biologically_prioritized_candidate
+ENSG00000113594	mRNA	LIFR	IL4	FDR_significant	FDR_significant	biologically_prioritized_candidate

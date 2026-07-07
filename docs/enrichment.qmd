@@ -1,0 +1,19 @@
+---
+title: "Functional Enrichment"
+---
+
+Historical GO and KEGG analyses were performed through the g:Profiler web interface. Original browser exports and settings were not recovered in the bounded local materials reviewed for this release.
+
+The final reproducible enrichment analysis uses `gprofiler2` with exact final input lists and assay-specific backgrounds.
+
+- mRNA enrichment uses unique upregulated nominal-discovery mRNAs and all genes retained for mRNA testing as background.
+- circRNA enrichment uses unique host genes of upregulated nominal-discovery circRNAs and all unique host genes represented on the analyzed Arraystar platform as background.
+
+Final adjusted-significant term counts:
+
+- IL-4 mRNA up nominal genes: 68 terms.
+- IL-13 mRNA up nominal genes: 44 terms.
+- IL-4 circRNA up nominal host genes: 0 terms.
+- IL-13 circRNA up nominal host genes: 0 terms.
+
+CircRNA enrichment plots show top adjusted terms for transparency only and should not be described as significant enrichment.

@@ -1,0 +1,13 @@
+---
+title: "mRNA Analysis"
+---
+
+The final mRNA analysis uses edgeR on `data/processed/mrna/all_counts.xlsx`. Genes were filtered at CPM > 1 in at least two samples, normalized with TMM, and tested with negative-binomial generalized linear models and likelihood-ratio tests.
+
+Final counts:
+
+- IL-4 versus Vehicle: 769 nominal-discovery genes and 536 FDR-significant genes.
+- IL-13 versus Vehicle: 697 nominal-discovery genes and 445 FDR-significant genes.
+- Same-direction shared genes: 546 nominal-discovery genes and 379 FDR-significant genes.
+
+CEMIP, TNC, and LIFR are positively induced and FDR significant after both cytokines.

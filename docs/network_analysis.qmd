@@ -1,0 +1,18 @@
+---
+title: "Network Analysis"
+---
+
+The final repository provides reproducible curated candidate network tables and simple R validation plots for the manuscript-aligned IL-4/IL-13 ceRNA workflow.
+
+Treatment-specific candidate networks include nominal-discovery downregulated miRNAs, nominal-discovery upregulated mRNAs, nominal-discovery upregulated circRNAs, and curated miRanda-supported miRNA-target edges from the integrated ceRNA network source.
+
+Restricted table sizes:
+
+- IL-4 candidate table: 26 edges and 17 nodes.
+- IL-13 candidate table: 7 edges and 7 nodes.
+- Strict shared table: 5 unique edges represented with treatment-specific evidence rows.
+- FDR-sensitivity network: empty because no miRNAs are FDR significant.
+
+These counts are not complete treatment-wide network sizes. Complete miRanda coverage remains pending complete target resources and a compatible miRanda v3.3a binary.
+
+Mature miRNA query FASTA files are validated to use U rather than T bases before miRanda provenance tables are written.

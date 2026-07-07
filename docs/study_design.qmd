@@ -1,0 +1,9 @@
+---
+title: "Study Design"
+---
+
+mRNA-seq, miRNA-seq, and circRNA microarray profiling used three independently cultured and treated biological replicates per condition: Vehicle, IL-4, and IL-13.
+
+The independently cultured and treated sample is the statistical unit. Each sequencing library or microarray corresponds to one biological replicate. Technical measurements in validation assays should be averaged within biological replicate before statistical testing.
+
+The predefined computational comparisons are IL-4 versus Vehicle and IL-13 versus Vehicle, with fold changes expressed as Treatment minus Vehicle.

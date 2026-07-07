@@ -1,0 +1,7 @@
+file	basename	bytes	sha256	sequence_line_T_count	mature_mirna_query_validation
+data/processed/final/miranda/inputs/all_3putr_circ.fa.txt	all_3putr_circ.fa.txt	25210	5dd0e8ab6ba9a8dd58ee5588207e7ff8700b21cc3a1872bb8c1bea3dd31e6069	7398	not a mature miRNA query file
+data/processed/final/miranda/inputs/IL13_vs_V_miRNA_down_seq.fa	IL13_vs_V_miRNA_down_seq.fa	991	a5f1582e518517e25de286172fdfa62c59a3d57720756a0f2acc67a41b42c60b	0	PASS: mature miRNA query sequence contains U/no T
+data/processed/final/miranda/inputs/IL13_vs_V_miRNA_up_seq.fa	IL13_vs_V_miRNA_up_seq.fa	2365	57b20ba53f2888f59fdfc2414c6465b84a816d782ea535f7494c08c7d0ec60e1	0	PASS: mature miRNA query sequence contains U/no T
+data/processed/final/miranda/inputs/IL4_vs_V_miRNA_down_seq.fa	IL4_vs_V_miRNA_down_seq.fa	1137	3f1a36e69f309d6f9c825d9f067d03ea23f739afb3a387f210238cf24350cfd9	0	PASS: mature miRNA query sequence contains U/no T
+data/processed/final/miranda/inputs/IL4_vs_V_miRNA_up_seq.fa	IL4_vs_V_miRNA_up_seq.fa	1432	4fb3bc958c8a295f258013f878def1e3e25c3363ba7ef2791901b1983efb265b	0	PASS: mature miRNA query sequence contains U/no T
+data/processed/miranda_inputs/mature_hsa.fa	mature_hsa.fa	200368	18cc850341914106f0a4f6d121a2102df94700bd8ad2f408774fe00ecd1b0345	0	PASS: mature miRNA query sequence contains U/no T

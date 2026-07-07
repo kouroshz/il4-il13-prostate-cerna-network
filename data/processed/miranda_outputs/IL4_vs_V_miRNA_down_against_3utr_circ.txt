@@ -1,0 +1,2703 @@
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+miranda v3.3a    microRNA Target Scanning Algorithm
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+(c) 2003 Memorial Sloan-Kettering Cancer Center, New York
+
+Authors: Anton Enright, Bino John, Chris Sander and Debora Marks
+(mirnatargets (at) cbio.mskcc.org - reaches all authors)
+
+Software written by: Anton Enright
+Distributed for anyone to use under the GNU Public License (GPL),
+See the files 'COPYING' and 'LICENSE' for details
+
+If you use this software please cite:
+Enright AJ, John B, Gaul U, Tuschl T, Sander C and Marks DS;
+(2003) Genome Biology; 5(1):R1.
+
+   miranda comes with ABSOLUTELY NO WARRANTY;
+   This is free software, and you are welcome to redistribute it
+   under certain conditions; type `miranda --license' for details.
+
+Current Settings:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Query Filename: 	IL4_vs_V_miRNA_down_seq.fa
+Reference Filename:	all_3putr_circ.fa.txt
+Gap Open Penalty:	-9.000000
+Gap Extend Penalty:	-4.000000
+Score Threshold:	140.000000
+Energy Threshold:	1.000000 kcal/mol
+Scaling Parameter:	4.000000
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Read Sequence:hsa-miR-320d MIMAT0006764 Homo sapiens miR-320d(19 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 9  R:831 to 849 Align Len (7) (100.00%) (100.00%)
+
+   Query:    3' aggagaguuggGUCGAAAa 5'
+                           ||||||| 
+   Ref:      5' tgatacagtgaCAGCTTTa 3'
+
+   Energy:  -11.210000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-320d	ENSG00000113594|ENSG00000113594.10|LIFR	140.00	-11.21	2 9	831 849	7	100.00%	100.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-320d	ENSG00000113594|ENSG00000113594.10|LIFR	140.00	-11.21	140.00	-11.21	2	19	6632	 831
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 18  R:154 to 173 Align Len (17) (76.47%) (94.12%)
+
+   Query:    3' agGAGAG-UUGGGUCGAAAa 5'
+                  ||||| |||::||:||| 
+   Ref:      5' atCTCTCAAACTTAGTTTTt 3'
+
+   Energy:  -22.059999 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-320d	ENSG00000108821|ENSG00000108821.14|COL1A1	140.00	-22.06	2 18	154 173	17	76.47%	94.12%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-320d	ENSG00000108821|ENSG00000108821.14|COL1A1	140.00	-22.06	140.00	-22.06	3	19	1401	 154
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-320d vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-1277-5p MIMAT0022724 Homo sapiens miR-1277-5p(24 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 19  R:2642 to 2665 Align Len (17) (64.71%) (76.47%)
+
+   Query:    3' uaugcaUGUAUAUAUAUAUAUAAa 5'
+                      |:: | | | ||||||| 
+   Ref:      5' atcaccATGAACAAAGATATATTt 3'
+
+   Energy:  -6.920000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	150.00	-6.92	2 19	2642 2665	17	64.71%	76.47%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-1277-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	150.00	-6.92	150.00	-6.92	18	24	2852	 2642
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 163.000000  Q:2 to 22  R:1707 to 1729 Align Len (20) (80.00%) (90.00%)
+
+   Query:    3' uauGCAUGUAUAUAUAUAUAUAAa 5'
+                   :||||||| ||| :|||||| 
+   Ref:      5' tttTGTACATACATA-GTATATTa 3'
+
+   Energy:  -14.140000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000113594|ENSG00000113594.10|LIFR	163.00	-14.14	2 22	1707 1729	20	80.00%	90.00%
+
+
+   Forward:	Score: 160.000000  Q:2 to 23  R:6598 to 6620 Align Len (21) (71.43%) (76.19%)
+
+   Query:    3' uaUGCAUGUAUAUAUAUAUAUAAa 5'
+                  |:| | | | ||| ||||||| 
+   Ref:      5' tcATGGA-AAAAATAAATATATTt 3'
+
+   Energy:  -6.800000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000113594|ENSG00000113594.10|LIFR	160.00	-6.80	2 23	6598 6620	21	71.43%	76.19%
+
+
+   Forward:	Score: 156.000000  Q:2 to 23  R:3031 to 3056 Align Len (23) (65.22%) (78.26%)
+
+   Query:    3' uaUGCAU-GUAUAUAUA-UAUAUAAa 5'
+                  |:| | | |:|: || ||||||| 
+   Ref:      5' agATGAACCTTGTGAATCATATATTg 3'
+
+   Energy:  -7.150000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000113594|ENSG00000113594.10|LIFR	156.00	-7.15	2 23	3031 3056	23	65.22%	78.26%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-1277-5p	ENSG00000113594|ENSG00000113594.10|LIFR	479.00	-28.09	163.00	-14.14	19	24	6632	 1707 6598 3031
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 152.000000  Q:2 to 19  R:2983 to 3005 Align Len (17) (76.47%) (94.12%)
+
+   Query:    3' uaugcaUGUAUAUAUAUAUAUAAa 5'
+                      :|||: ||||:|||||| 
+   Ref:      5' aggaaaGCATG-ATATGTATATTg 3'
+
+   Energy:  -12.030000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000026508|ENSG00000026508.21|CD44	152.00	-12.03	2 19	2983 3005	17	76.47%	94.12%
+
+
+   Forward:	Score: 145.000000  Q:2 to 23  R:292 to 316 Align Len (22) (68.18%) (72.73%)
+
+   Query:    3' uaUGCAUGU-AUAUAUAUAUAUAAa 5'
+                  ||  | | || | ||||:|||| 
+   Ref:      5' taACAAAAACTACACATATGTATTc 3'
+
+   Energy:  -10.110000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-1277-5p	ENSG00000026508|ENSG00000026508.21|CD44	145.00	-10.11	2 23	292 316	22	68.18%	72.73%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-1277-5p	ENSG00000026508|ENSG00000026508.21|CD44	297.00	-22.14	152.00	-12.03	22	24	3069	 2983 292
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1277-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-181d-5p MIMAT0002821 Homo sapiens miR-181d-5p(23 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 155.000000  Q:2 to 20  R:2289 to 2311 Align Len (18) (61.11%) (83.33%)
+
+   Query:    3' ugggUGGCUGUUGUUACUUACAa 5'
+                    :|| : ||:: ||||||| 
+   Ref:      5' ggtgGCCAGGAATGTTGAATGTc 3'
+
+   Energy:  -12.630000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-181d-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	155.00	-12.63	2 20	2289 2311	18	61.11%	83.33%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-181d-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	155.00	-12.63	155.00	-12.63	35	23	2852	 2289
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 152.000000  Q:2 to 13  R:5954 to 5976 Align Len (11) (90.91%) (90.91%)
+
+   Query:    3' uggguggcuguUGUUACUUACAa 5'
+                           | ||||||||| 
+   Ref:      5' ataaggtttgtAGAATGAATGTt 3'
+
+   Energy:  -11.960000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-181d-5p	ENSG00000113594|ENSG00000113594.10|LIFR	152.00	-11.96	2 13	5954 5976	11	90.91%	90.91%
+
+
+   Forward:	Score: 143.000000  Q:2 to 17  R:4791 to 4815 Align Len (17) (70.59%) (70.59%)
+
+   Query:    3' uggguggCUGUU--GUUACUUACAa 5'
+                       || ||  |  ||||||| 
+   Ref:      5' ttaagggGAAAACCCTCTGAATGTt 3'
+
+   Energy:  -14.500000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-181d-5p	ENSG00000113594|ENSG00000113594.10|LIFR	143.00	-14.50	2 17	4791 4815	17	70.59%	70.59%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-181d-5p	ENSG00000113594|ENSG00000113594.10|LIFR	295.00	-26.46	152.00	-14.50	36	23	6632	 5954 4791
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 22  R:311 to 335 Align Len (22) (68.18%) (81.82%)
+
+   Query:    3' ugGGUGGCUG--UUGUUACUUACAa 5'
+                  |||:| :|  |:|||||| ||| 
+   Ref:      5' gcCCATCTGCAGAGCAATGACTGTg 3'
+
+   Energy:  -23.420000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-181d-5p	COL3A1	140.00	-23.42	2 22	311 335	22	68.18%	81.82%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-181d-5p	COL3A1	140.00	-23.42	140.00	-23.42	42	23	972	 311
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 144.000000  Q:3 to 22  R:584 to 607 Align Len (20) (75.00%) (75.00%)
+
+   Query:    3' ugGGUG-GCUGUUGUUACUUACaa 5'
+                  ||||   |||||  ||||||  
+   Ref:      5' acCCACAACACAACTCTGAATGgc 3'
+
+   Energy:  -24.030001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-181d-5p	circLIFR:circ_103819:circ_0072305	144.00	-24.03	3 22	584 607	20	75.00%	75.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-181d-5p	circLIFR:circ_103819:circ_0072305	144.00	-24.03	144.00	-24.03	45	23	1904	 584
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-181d-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-132-5p MIMAT0004594 Homo sapiens miR-132-5p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 21  R:260 to 280 Align Len (19) (73.68%) (84.21%)
+
+   Query:    3' ucAUUGUUAGCUUUCGGUGCCa 5'
+                  ||:||| | | |||||:|| 
+   Ref:      5' taTAGCAA-CAACAGCCATGGg 3'
+
+   Energy:  -18.290001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-132-5p	circTNC:circ_0088194	150.00	-18.29	2 21	260 280	19	73.68%	84.21%
+
+
+   Forward:	Score: 145.000000  Q:2 to 15  R:710 to 733 Align Len (15) (73.33%) (80.00%)
+
+   Query:    3' ucauuguuAGCUU--UCGGUGCCa 5'
+                        ||||:   ||||||| 
+   Ref:      5' gaccgaccTCGAGCCTGCCACGGa 3'
+
+   Energy:  -21.270000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-132-5p	circTNC:circ_0088194	145.00	-21.27	2 15	710 733	15	73.33%	80.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-132-5p	circTNC:circ_0088194	295.00	-39.56	150.00	-21.27	60	22	804	 260 710
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 146.000000  Q:2 to 19  R:620 to 641 Align Len (17) (70.59%) (82.35%)
+
+   Query:    3' ucauUGUUAGCUUUCGGUGCCa 5'
+                    ||| | |: |||||:|| 
+   Ref:      5' gcctACACTGGGCAGCCATGGc 3'
+
+   Energy:  -18.900000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-132-5p	circKITLG:circ_002375:circ_0002375	146.00	-18.90	2 19	620 641	17	70.59%	82.35%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-132-5p	circKITLG:circ_002375:circ_0002375	146.00	-18.90	146.00	-18.90	67	22	844	 620
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-132-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-215-5p MIMAT0000272 Homo sapiens miR-215-5p(21 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 148.000000  Q:2 to 19  R:3072 to 3089 Align Len (17) (82.35%) (82.35%)
+
+   Query:    3' cagACAGUUAAGUAUCCAGUa 5'
+                   || ||| || ||||||| 
+   Ref:      5' gtaTG-CAA-TC-TAGGTCAt 3'
+
+   Energy:  -14.840000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-215-5p	ENSG00000113594|ENSG00000113594.10|LIFR	148.00	-14.84	2 19	3072 3089	17	82.35%	82.35%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-215-5p	ENSG00000113594|ENSG00000113594.10|LIFR	148.00	-14.84	148.00	-14.84	70	21	6632	 3072
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-215-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-3940-3p MIMAT0018356 Homo sapiens miR-3940-3p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3940-3p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-124-5p MIMAT0004591 Homo sapiens miR-124-5p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 147.000000  Q:2 to 16  R:1783 to 1804 Align Len (14) (78.57%) (92.86%)
+
+   Query:    3' uaguuccAGGCGACACUUGUGc 5'
+                       ||: |||||||||: 
+   Ref:      5' tcctttcTCTTCTGTGAACATc 3'
+
+   Energy:  -15.910000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-124-5p	ENSG00000026508|ENSG00000026508.21|CD44	147.00	-15.91	2 16	1783 1804	14	78.57%	92.86%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-124-5p	ENSG00000026508|ENSG00000026508.21|CD44	147.00	-15.91	147.00	-15.91	107	22	3069	 1783
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 9  R:780 to 801 Align Len (7) (100.00%) (100.00%)
+
+   Query:    3' uaguuccaggcgacACUUGUGc 5'
+                              ||||||| 
+   Ref:      5' tttttaaataaagtTGAACACa 3'
+
+   Energy:  -8.040000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-124-5p	ENSG00000041982|ENSG00000041982.17|TNC	140.00	-8.04	2 9	780 801	7	100.00%	100.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-124-5p	ENSG00000041982|ENSG00000041982.17|TNC	140.00	-8.04	140.00	-8.04	108	22	1582	 780
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-124-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-331-5p MIMAT0004700 Homo sapiens miR-331-5p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 156.000000  Q:2 to 21  R:273 to 294 Align Len (19) (63.16%) (78.95%)
+
+   Query:    3' ccUAGGGACCCUGGUAUGGAUc 5'
+                  ||::|  || : ||||||| 
+   Ref:      5' gcATTTCAAGGCTAATACCTAc 3'
+
+   Energy:  -12.980000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-331-5p	ENSG00000113594|ENSG00000113594.10|LIFR	156.00	-12.98	2 21	273 294	19	63.16%	78.95%
+
+
+   Forward:	Score: 153.000000  Q:2 to 21  R:1183 to 1202 Align Len (19) (78.95%) (84.21%)
+
+   Query:    3' ccUAGGGACCCUGGUAUGGAUc 5'
+                  |||| ||||  |||||||: 
+   Ref:      5' gaATCCATGGG--CATACCTGt 3'
+
+   Energy:  -22.219999 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-331-5p	ENSG00000113594|ENSG00000113594.10|LIFR	153.00	-22.22	2 21	1183 1202	19	78.95%	84.21%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-331-5p	ENSG00000113594|ENSG00000113594.10|LIFR	309.00	-35.20	156.00	-22.22	121	22	6632	 273 1183
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 141.000000  Q:3 to 20  R:2197 to 2217 Align Len (17) (76.47%) (82.35%)
+
+   Query:    3' ccuAGGGACCCUGGUAUGGAuc 5'
+                   || || ||| :||||||  
+   Ref:      5' cccTCACTTGGA-TATACCTct 3'
+
+   Energy:  -15.780000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-331-5p	ENSG00000026508|ENSG00000026508.21|CD44	141.00	-15.78	3 20	2197 2217	17	76.47%	82.35%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-331-5p	ENSG00000026508|ENSG00000026508.21|CD44	141.00	-15.78	141.00	-15.78	124	22	3069	 2197
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 21  R:465 to 485 Align Len (19) (63.16%) (78.95%)
+
+   Query:    3' ccUAGGGACCCUGGUAUGGAUc 5'
+                  | |:||   |::||||||| 
+   Ref:      5' caACCTCT-ACATTATACCTAa 3'
+
+   Energy:  -14.500000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-331-5p	circLIFR:circ_103819:circ_0072305	150.00	-14.50	2 21	465 485	19	63.16%	78.95%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-331-5p	circLIFR:circ_103819:circ_0072305	150.00	-14.50	150.00	-14.50	130	22	1904	 465
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 21  R:465 to 485 Align Len (19) (63.16%) (78.95%)
+
+   Query:    3' ccUAGGGACCCUGGUAUGGAUc 5'
+                  | |:||   |::||||||| 
+   Ref:      5' caACCTCT-ACATTATACCTAa 3'
+
+   Energy:  -14.500000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-331-5p	circLIFR:circ_103820:circ_0072309	150.00	-14.50	2 21	465 485	19	63.16%	78.95%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-331-5p	circLIFR:circ_103820:circ_0072309	150.00	-14.50	150.00	-14.50	131	22	580	 465
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-331-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-625-3p MIMAT0004808 Homo sapiens miR-625-3p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 157.000000  Q:2 to 14  R:3388 to 3409 Align Len (12) (91.67%) (91.67%)
+
+   Query:    3' acucccccuUUCAAGAUAUCAg 5'
+                         |||| ||||||| 
+   Ref:      5' gttggaaatAAGTCCTATAGTt 3'
+
+   Energy:  -14.260000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-625-3p	ENSG00000113594|ENSG00000113594.10|LIFR	157.00	-14.26	2 14	3388 3409	12	91.67%	91.67%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-625-3p	ENSG00000113594|ENSG00000113594.10|LIFR	157.00	-14.26	157.00	-14.26	138	22	6632	 3388
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-625-3p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-3135b MIMAT0018985 Homo sapiens miR-3135b(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 160.000000  Q:2 to 17  R:2692 to 2713 Align Len (15) (73.33%) (93.33%)
+
+   Query:    3' guggugACGUGAGCGAGGUCGg 5'
+                      ||:::|| ||||||| 
+   Ref:      5' gctagaTGTGTTCTCTCCAGCc 3'
+
+   Energy:  -27.250000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	ENSG00000113594|ENSG00000113594.10|LIFR	160.00	-27.25	2 17	2692 2713	15	73.33%	93.33%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	ENSG00000113594|ENSG00000113594.10|LIFR	160.00	-27.25	160.00	-27.25	155	22	6632	 2692
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 17  R:1077 to 1097 Align Len (15) (73.33%) (86.67%)
+
+   Query:    3' guggugACGUGAGCGAGGUCGg 5'
+                      ||::|  |||||||| 
+   Ref:      5' agagcgTGTGC-GGCTCCAGCc 3'
+
+   Energy:  -24.370001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	ENSG00000108821|ENSG00000108821.14|COL1A1	150.00	-24.37	2 17	1077 1097	15	73.33%	86.67%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	ENSG00000108821|ENSG00000108821.14|COL1A1	150.00	-24.37	150.00	-24.37	156	22	1401	 1077
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 159.000000  Q:2 to 21  R:1050 to 1072 Align Len (20) (70.00%) (80.00%)
+
+   Query:    3' guGGUGACGUGA-GCGAGGUCGg 5'
+                  :|||  :||| | ||||||| 
+   Ref:      5' gaTCACACTACTGCACTCCAGCc 3'
+
+   Energy:  -33.299999 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	ENSG00000041982|ENSG00000041982.17|TNC	159.00	-33.30	2 21	1050 1072	20	70.00%	80.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	ENSG00000041982|ENSG00000041982.17|TNC	159.00	-33.30	159.00	-33.30	159	22	1582	 1050
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 141.000000  Q:2 to 16  R:114 to 134 Align Len (14) (71.43%) (78.57%)
+
+   Query:    3' guggugaCGUGAGCGAGGUCGg 5'
+                       | | |: ||||||| 
+   Ref:      5' tctggagGAAGTT-CTCCAGCt 3'
+
+   Energy:  -16.090000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	ENSG00000115414|ENSG00000115414.21|FN1	141.00	-16.09	2 16	114 134	14	71.43%	78.57%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	ENSG00000115414|ENSG00000115414.21|FN1	141.00	-16.09	141.00	-16.09	160	22	1101	 114
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 21  R:215 to 237 Align Len (20) (75.00%) (85.00%)
+
+   Query:    3' guGGUGACGUGAGCGA-GGUCGg 5'
+                  :| ||| |||:||| ||||| 
+   Ref:      5' ccTCTCTGGACTTGCTCCCAGCa 3'
+
+   Energy:  -27.980000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	circTNC:circ_0088200	140.00	-27.98	2 21	215 237	20	75.00%	85.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	circTNC:circ_0088200	140.00	-27.98	140.00	-27.98	163	22	273	 215
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 146.000000  Q:2 to 21  R:9 to 32 Align Len (21) (66.67%) (85.71%)
+
+   Query:    3' guGGUG-ACGUGAG-CGAGGUCGg 5'
+                  :||| ||||:|:  ||:|||| 
+   Ref:      5' tcTCACTTGCATTTATCTTCAGCt 3'
+
+   Energy:  -22.910000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	circKITLG:circ_002375:circ_0002375	146.00	-22.91	2 21	9 32	21	66.67%	85.71%
+
+
+   Forward:	Score: 145.000000  Q:2 to 21  R:603 to 622 Align Len (19) (68.42%) (68.42%)
+
+   Query:    3' guGGUGACGUGAGCGAGGUCGg 5'
+                  || ||| |    ||||||| 
+   Ref:      5' tcCCCCTGGA--GACTCCAGCc 3'
+
+   Energy:  -22.290001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3135b	circKITLG:circ_002375:circ_0002375	145.00	-22.29	2 21	603 622	19	68.42%	68.42%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3135b	circKITLG:circ_002375:circ_0002375	291.00	-45.20	146.00	-22.91	169	22	844	 9 603
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3135b vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-3681-5p MIMAT0018108 Homo sapiens miR-3681-5p(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 153.000000  Q:2 to 19  R:676 to 700 Align Len (20) (70.00%) (75.00%)
+
+   Query:    3' cgugUCUCACGUA---GUAGGUGAu 5'
+                    | ||| |||   :||||||| 
+   Ref:      5' cccaACAGTTCATGGATATCCACTg 3'
+
+   Energy:  -18.530001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	153.00	-18.53	2 19	676 700	20	70.00%	75.00%
+
+
+   Forward:	Score: 147.000000  Q:2 to 21  R:319 to 341 Align Len (20) (65.00%) (70.00%)
+
+   Query:    3' cgUGUCUCACG-UAGUAGGUGAu 5'
+                  :| ||  || |  ||||||| 
+   Ref:      5' gtGCTGACAGCAAAGATCCACTt 3'
+
+   Energy:  -14.700000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	147.00	-14.70	2 21	319 341	20	65.00%	70.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	ENSG00000103888|ENSG00000103888.17|CEMIP	300.00	-33.23	153.00	-18.53	171	22	2852	 676 319
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 145.000000  Q:2 to 21  R:3205 to 3226 Align Len (20) (75.00%) (80.00%)
+
+   Query:    3' cgUGUCUCACGU-AGUAGGUGAu 5'
+                  |||||  |||  |||:|||| 
+   Ref:      5' aaACAGA-AGCAGCCATTCACTg 3'
+
+   Energy:  -20.920000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000113594|ENSG00000113594.10|LIFR	145.00	-20.92	2 21	3205 3226	20	75.00%	80.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	ENSG00000113594|ENSG00000113594.10|LIFR	145.00	-20.92	145.00	-20.92	172	22	6632	 3205
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 21  R:266 to 287 Align Len (19) (63.16%) (73.68%)
+
+   Query:    3' cgUGUCUCACGUAGUAGGUGAu 5'
+                  | ||:  || | :|||||| 
+   Ref:      5' aaAAAGGAAGCTTGGTCCACTt 3'
+
+   Energy:  -15.120000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000108821|ENSG00000108821.14|COL1A1	140.00	-15.12	2 21	266 287	19	63.16%	73.68%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	ENSG00000108821|ENSG00000108821.14|COL1A1	140.00	-15.12	140.00	-15.12	173	22	1401	 266
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 140.000000  Q:2 to 15  R:97 to 117 Align Len (13) (84.62%) (92.31%)
+
+   Query:    3' cgugucucACGUAGUAGGUGAu 5'
+                        |||| ||||:||| 
+   Ref:      5' atttcttcTGCA-CATCTACTt 3'
+
+   Energy:  -14.920000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000164692|ENSG00000164692.19|COL1A2	140.00	-14.92	2 15	97 117	13	84.62%	92.31%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	ENSG00000164692|ENSG00000164692.19|COL1A2	140.00	-14.92	140.00	-14.92	174	22	834	 97
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 144.000000  Q:2 to 21  R:1410 to 1431 Align Len (19) (57.89%) (84.21%)
+
+   Query:    3' cgUGUCUCACGUAGUAGGUGAu 5'
+                  |:| | | ::|:|||||:| 
+   Ref:      5' gaATAAATTATGTTATCCATTt 3'
+
+   Energy:  -12.370000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	ENSG00000041982|ENSG00000041982.17|TNC	144.00	-12.37	2 21	1410 1431	19	57.89%	84.21%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	ENSG00000041982|ENSG00000041982.17|TNC	144.00	-12.37	144.00	-12.37	176	22	1582	 1410
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 161.000000  Q:2 to 19  R:139 to 161 Align Len (18) (77.78%) (83.33%)
+
+   Query:    3' cgugUCUC-ACGUAGUAGGUGAu 5'
+                    ||:| | || |||||||| 
+   Ref:      5' cagaAGGGCTACACCATCCACTg 3'
+
+   Energy:  -20.110001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-3681-5p	circKIAA1199:circ_101622:circ_0003893	161.00	-20.11	2 19	139 161	18	77.78%	83.33%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-3681-5p	circKIAA1199:circ_101622:circ_0003893	161.00	-20.11	161.00	-20.11	184	22	398	 139
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-3681-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-135b-5p MIMAT0000758 Homo sapiens miR-135b-5p(23 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 148.000000  Q:2 to 19  R:1467 to 1488 Align Len (17) (70.59%) (76.47%)
+
+   Query:    3' aguguAUCCUUACUUUUCGGUAu 5'
+                     | |  || |:||||||| 
+   Ref:      5' gctgcTTGTCAT-AGAAGCCATt 3'
+
+   Energy:  -12.580000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-135b-5p	ENSG00000026508|ENSG00000026508.21|CD44	148.00	-12.58	2 19	1467 1488	17	70.59%	76.47%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-135b-5p	ENSG00000026508|ENSG00000026508.21|CD44	148.00	-12.58	148.00	-12.58	192	23	3069	 1467
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 152.000000  Q:2 to 22  R:400 to 423 Align Len (21) (61.90%) (76.19%)
+
+   Query:    3' agUGUAU-CCUUACUUUUCGGUAu 5'
+                  | ||: |  || ::||||||| 
+   Ref:      5' ttAAATGTGTCATTGGAAGCCATc 3'
+
+   Energy:  -11.550000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-135b-5p	ENSG00000041982|ENSG00000041982.17|TNC	152.00	-11.55	2 22	400 423	21	61.90%	76.19%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-135b-5p	ENSG00000041982|ENSG00000041982.17|TNC	152.00	-11.55	152.00	-11.55	193	23	1582	 400
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 143.000000  Q:2 to 22  R:1178 to 1199 Align Len (20) (70.00%) (75.00%)
+
+   Query:    3' agUGUAUCCUUACUUUUCGGUAu 5'
+                  || ||  || | |||||:|| 
+   Ref:      5' gcACCTACAAACG-AAAGCTATc 3'
+
+   Energy:  -9.430000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-135b-5p	circLIFR:circ_103819:circ_0072305	143.00	-9.43	2 22	1178 1199	20	70.00%	75.00%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-135b-5p	circLIFR:circ_103819:circ_0072305	143.00	-9.43	143.00	-9.43	198	23	1904	 1178
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 146.000000  Q:2 to 21  R:51 to 72 Align Len (19) (68.42%) (68.42%)
+
+   Query:    3' aguGUAUCCUUACUUUUCGGUAu 5'
+                   ||  ||||    ||||||| 
+   Ref:      5' accCAGTGGAA-CCCAAGCCATt 3'
+
+   Energy:  -14.000000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-135b-5p	circCD44:circ_100796:circ_0021727	146.00	-14.00	2 21	51 72	19	68.42%	68.42%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-135b-5p	circCD44:circ_100796:circ_0021727	146.00	-14.00	146.00	-14.00	202	23	360	 51
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-135b-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-4705 MIMAT0019805 Homo sapiens miR-4705(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 163.000000  Q:2 to 21  R:1286 to 1308 Align Len (20) (70.00%) (85.00%)
+
+   Query:    3' ugUCGUUA-AUGGUUCACUAACu 5'
+                  |||:|| | : :|||||||| 
+   Ref:      5' taAGCGATGTCTGGAGTGATTGt 3'
+
+   Energy:  -19.700001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-4705	ENSG00000113594|ENSG00000113594.10|LIFR	163.00	-19.70	2 21	1286 1308	20	70.00%	85.00%
+
+
+   Forward:	Score: 160.000000  Q:2 to 21  R:5581 to 5602 Align Len (19) (57.89%) (89.47%)
+
+   Query:    3' ugUCGUUAAUGGUUCACUAACu 5'
+                  :|:|: |:::| ||||||| 
+   Ref:      5' ggGGTAGGTGTTATGTGATTGa 3'
+
+   Energy:  -17.540001 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-4705	ENSG00000113594|ENSG00000113594.10|LIFR	160.00	-17.54	2 21	5581 5602	19	57.89%	89.47%
+
+
+   Forward:	Score: 154.000000  Q:2 to 16  R:5111 to 5133 Align Len (15) (80.00%) (86.67%)
+
+   Query:    3' ugucguuAAUG-GUUCACUAACu 5'
+                       ||:| || ||||||| 
+   Ref:      5' aaatactTTGCACACGTGATTGa 3'
+
+   Energy:  -14.790000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-4705	ENSG00000113594|ENSG00000113594.10|LIFR	154.00	-14.79	2 16	5111 5133	15	80.00%	86.67%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-4705	ENSG00000113594|ENSG00000113594.10|LIFR	477.00	-52.03	163.00	-19.70	206	22	6632	 1286 5581 5111
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 151.000000  Q:2 to 21  R:451 to 474 Align Len (21) (66.67%) (71.43%)
+
+   Query:    3' ugUCGUUAA--UGGUUCACUAACu 5'
+                  :|||  |  | | |||||||| 
+   Ref:      5' gtGGCATCTGAAACTAGTGATTGt 3'
+
+   Energy:  -15.780000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-4705	circKITLG:circ_002375:circ_0002375	151.00	-15.78	2 21	451 474	21	66.67%	71.43%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-4705	circKITLG:circ_002375:circ_0002375	151.00	-15.78	151.00	-15.78	220	22	844	 451
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4705 vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-1307-5p MIMAT0022727 Homo sapiens miR-1307-5p(21 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-1307-5p vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:hsa-miR-4467 MIMAT0018994 Homo sapiens miR-4467(22 nt)
+Read Sequence:ENSG00000103888|ENSG00000103888.17|CEMIP (2852 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000103888|ENSG00000103888.17|CEMIP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   Forward:	Score: 150.000000  Q:2 to 21  R:964 to 984 Align Len (19) (73.68%) (84.21%)
+
+   Query:    3' uuCGGGUAUUGAUGGCGGCGGu 5'
+                  |||| |  ||:||||:||| 
+   Ref:      5' caGCCC-TCCCTGCCGCTGCCt 3'
+
+   Energy:  -32.000000 kCal/Mol
+
+Scores for this hit:
+>hsa-miR-4467	ENSG00000103888|ENSG00000103888.17|CEMIP	150.00	-32.00	2 21	964 984	19	73.68%	84.21%
+
+Score for this Scan:
+Seq1,Seq2,Tot Score,Tot Energy,Max Score,Max Energy,Strand,Len1,Len2,Positions
+>>hsa-miR-4467	ENSG00000103888|ENSG00000103888.17|CEMIP	150.00	-32.00	150.00	-32.00	239	22	2852	 964
+Complete
+
+Read Sequence:ENSG00000113594|ENSG00000113594.10|LIFR (6632 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000113594|ENSG00000113594.10|LIFR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000108821|ENSG00000108821.14|COL1A1 (1401 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000108821|ENSG00000108821.14|COL1A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000164692|ENSG00000164692.19|COL1A2 (834 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000164692|ENSG00000164692.19|COL1A2
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000026508|ENSG00000026508.21|CD44 (3069 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000026508|ENSG00000026508.21|CD44
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000041982|ENSG00000041982.17|TNC (1582 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000041982|ENSG00000041982.17|TNC
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:ENSG00000115414|ENSG00000115414.21|FN1 (1101 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs ENSG00000115414|ENSG00000115414.21|FN1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:COL3A1 (972 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs COL3A1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088194 (804 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circTNC:circ_0088194
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circTNC:circ_0088200 (273 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circTNC:circ_0088200
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103819:circ_0072305 (1904 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circLIFR:circ_103819:circ_0072305
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circLIFR:circ_103820:circ_0072309 (580 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circLIFR:circ_103820:circ_0072309
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101621:circ_0002970 (386 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circKIAA1199:circ_101621:circ_0002970
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKIAA1199:circ_101622:circ_0003893 (398 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circKIAA1199:circ_101622:circ_0003893
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circCD44:circ_100796:circ_0021727 (360 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circCD44:circ_100796:circ_0021727
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circKITLG:circ_002375:circ_0002375 (844 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circKITLG:circ_002375:circ_0002375
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Read Sequence:circMAPKAPPK3:circ_103383:circ_0065871 (285 nt)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Performing Scan: hsa-miR-4467 vs circMAPKAPPK3:circ_103383:circ_0065871
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Score for this Scan:
+No Hits Found above Threshold
+Complete
+
+Scan Complete
+

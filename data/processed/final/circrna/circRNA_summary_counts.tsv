@@ -1,0 +1,3 @@
+assay	analysis_source	contrast	total_features	nominal_discovery	nominal_up	nominal_down	FDR_significant	FDR_up	FDR_down
+circRNA microarray	recovered_original_circRNA_DEG_workbook	IL4_vs_Vehicle	13131	321	318	3	0	0	0
+circRNA microarray	recovered_original_circRNA_DEG_workbook	IL13_vs_Vehicle	13134	42	42	0	0	0	0

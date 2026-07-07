@@ -1,0 +1,10 @@
+sample_name	source_column	condition	biological_replicate	assay	statistical_unit	notes
+V_A	V_A_S1_L001 (trimmed, grouped on mature) - CPM	Vehicle	1	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+V_B	V_B_S2_L001 (trimmed, grouped on mature) - CPM	Vehicle	2	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+V_C	V_C_S3_L001 (trimmed, grouped on mature) - CPM	Vehicle	3	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL4_A	IL4_A_S7_L001 (trimmed, grouped on mature) - CPM	IL4	1	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL4_B	IL4_B_S8_L001 (trimmed, grouped on mature) - CPM	IL4	2	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL4_C	IL4_C_S9_L001 (trimmed, grouped on mature) - CPM	IL4	3	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL13_A	IL13_A_S4_L001 (trimmed, grouped on mature) - CPM	IL13	1	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL13_B	IL13_B_S5_L001 (trimmed, grouped on mature) - CPM	IL13	2	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
+IL13_C	IL13_C_S6_L001 (trimmed, grouped on mature) - CPM	IL13	3	miRNA-seq	independently cultured and treated biological replicate	Verified CPM expression matrix column
