@@ -1,22 +1,21 @@
 project:
-  name: IL4_IL13_scirep
-  final_results_source: compact_processed_inputs
-  rscript: Rscript
+  name: IL4_IL13_prostate_fibroblast_ceRNA
+  workflow: revised_public_reproducible_analysis
+  driver: run_all.R
+
+directories:
+  metadata: data/metadata
+  processed_inputs: data/processed
+  tables: results/tables
+  figures: results/figures
+  logs: results/logs
+  session: results/session
 
 thresholds:
   nominal_p: 0.05
   fold_change: 1.5
   log2_fold_change: 0.5849625007211562
   fdr: 0.05
-
-significance_classes:
-  nominal_discovery_mrna_circrna: assay-specific nominal P < 0.05 and absolute fold change >= 1.5
-  nominal_discovery_mirna: nominal two-sided Welch-test P < 0.05; prioritization additionally uses directionality, integrated-network relevance, and experimental suitability
-  FDR_significant_mrna_circrna: Benjamini-Hochberg FDR < 0.05 and absolute fold change >= 1.5
-  FDR_significant_mirna: Benjamini-Hochberg FDR < 0.05
-  biologically_prioritized: selected using direction, predicted interaction, biological and fibrosis relevance, and suitability for experimental testing
-  experimentally_supported: supported by subsequent functional experiments
-  experimentally_not_supported: tested experimentally but did not produce the predicted response
 
 contrasts:
   - IL4_vs_Vehicle
@@ -36,74 +35,81 @@ samples:
     - IL13_B
     - IL13_C
 
-mRNA:
-  compact_count_matrix: data/processed/mrna/all_counts.xlsx
-  differential_expression_table: results/tables/Table_S3_mRNA_differential_expression.tsv
-  figures:
-    overlap: results/figures/Figure_3A_mRNA_overlap.png
-    IL4_volcano: results/figures/Figure_3B_mRNA_IL4_volcano.png
-    IL13_volcano: results/figures/Figure_3C_mRNA_IL13_volcano.png
-  model: edgeR GLM likelihood-ratio test
-  normalization: TMM
-  filtering: CPM > 1 in at least two samples
-  contrast_direction: Treatment minus Vehicle
-
-miRNA:
-  expression_matrix: data/processed/mirna/Expression_Browser_CPM.csv
-  differential_expression_table: results/tables/Table_S1_miRNA_differential_expression.tsv
-  figures:
-    overlap: results/figures/Figure_1A_miRNA_overlap.png
-    IL4_volcano: results/figures/Figure_1B_miRNA_IL4_volcano.png
-    IL13_volcano: results/figures/Figure_1C_miRNA_IL13_volcano.png
-  transformation: log2(CPM + 1)
-  test: two-sided Welch t-test
-  contrast_direction: Treatment minus Vehicle
-
-circRNA:
-  normalized_matrix: data/processed/circrna/CircRNA_normalized_Data_KZ.xlsx
-  recovered_original_deg_tables:
+inputs:
+  metadata:
+    mRNA: data/metadata/mrna_sample_metadata.tsv
+    miRNA: data/metadata/mirna_samples.tsv
+    circRNA: data/metadata/circrna_samples.tsv
+  mRNA_counts: data/processed/mrna/all_counts.xlsx
+  miRNA_CPM: data/processed/mirna/Expression_Browser_CPM.csv
+  circRNA_normalized_matrix: data/processed/circrna/CircRNA_normalized_Data_KZ.xlsx
+  circRNA_DE_tables:
     IL4_vs_Vehicle: data/processed/circrna/circRNA_original_IL4_vs_Vehicle_DEG.tsv
     IL13_vs_Vehicle: data/processed/circrna/circRNA_original_IL13_vs_Vehicle_DEG.tsv
-  provider_workbook: data/processed/circrna/Differentially_Expressed_CircRNAs_Arraystar_provider.xlsx
-  differential_expression_table: results/tables/Table_S2_circRNA_differential_expression.tsv
+  miRanda_inputs: data/processed/miranda_inputs
+  miRanda_outputs: data/processed/miranda_outputs
+  integrated_ceRNA_network: data/processed/network/integrated_ceRNA_network_curated.tsv
+
+analysis:
+  mRNA:
+    method: edgeR TMM GLM likelihood-ratio test
+    filtering: CPM greater than 1 in at least two samples
+    discovery_rule: nominal likelihood-ratio-test P < 0.05 and absolute fold change >= 1.5
+    fdr_rule: Benjamini-Hochberg FDR < 0.05 and absolute fold change >= 1.5
+  miRNA:
+    method: log2(CPM + 1) with two-sided Welch tests
+    discovery_rule: nominal two-sided Welch-test P < 0.05 and absolute fold change >= 1.5
+    fdr_rule: Benjamini-Hochberg FDR < 0.05
+  circRNA:
+    method: recovered Arraystar differential-expression source tables
+    discovery_rule: assay-specific nominal P < 0.05 and absolute fold change >= 1.5
+    fdr_rule: Benjamini-Hochberg FDR < 0.05 and absolute fold change >= 1.5
+  enrichment:
+    method: gprofiler2
+    organism: hsapiens
+    correction_method: g_SCS
+    sources:
+      - GO:MF
+      - GO:BP
+      - GO:CC
+      - KEGG
+  ceRNA_network:
+    method: current revised integrated ceRNA workflow
+    interaction_source: miRanda-predicted miRNA-target interactions
+    focused_output: prioritized axes
+    de_novo_transcriptome_wide_miRanda: outside scope of this release
+    mature_miRNA_sequences: RNA U bases required
+
+outputs:
+  tables:
+    miRNA_differential_expression: results/tables/Table_S1_miRNA_differential_expression.tsv
+    circRNA_differential_expression: results/tables/Table_S2_circRNA_differential_expression.tsv
+    mRNA_differential_expression: results/tables/Table_S3_mRNA_differential_expression.tsv
+    enrichment_results: results/tables/Table_S4_enrichment_results.tsv
+    integrated_ceRNA_network: results/tables/Table_S5_integrated_ceRNA_network.tsv
+    prioritized_axes_miRanda_scores: results/tables/Table_S6_prioritized_axes_miRanda_scores.tsv
+    summary_counts: results/tables/Table_S7_summary_counts.tsv
   figures:
-    overlap: results/figures/Figure_2A_circRNA_overlap.png
-    IL4_volcano: results/figures/Figure_2B_circRNA_IL4_volcano.png
-    IL13_volcano: results/figures/Figure_2C_circRNA_IL13_volcano.png
-  final_manuscript_source: recovered original circRNA DEG tables
-  internal_check_model: limma empirical Bayes
-  input_scale: normalized log2 expression
-  additional_log_transform: false
-  contrast_direction: Treatment minus Vehicle
-
-enrichment:
-  organism: hsapiens
-  sources:
-    - GO:MF
-    - GO:BP
-    - GO:CC
-    - KEGG
-  correction_method: g_SCS
-  use_custom_background: true
-
-miRanda:
-  version_target: v3.3a
-  score_threshold: 140
-  mature_mirna_query_sequences: data/processed/miranda_inputs
-  target_sequences: data/processed/miranda_inputs/all_3putr_circ.fa.txt
-  precomputed_outputs: data/processed/miranda_outputs
-  require_mature_mirna_rna_bases: true
-  coverage_scope: focused selected fibrosis-related mRNA 3-prime UTR and circRNA target FASTA
-  complete_run_status: de novo transcriptome-wide rerun is outside the scope of this release
-
-networks:
-  canonical_scope: revised current IL-4/IL-13 fibrosis-focused ceRNA network
-  curated_integrated_network: data/processed/network/integrated_ceRNA_network_curated.tsv
-  integrated_table: results/tables/Table_S5_integrated_ceRNA_network.tsv
-  prioritized_axes_table: results/tables/Table_S6_prioritized_axes_miRanda_scores.tsv
-  figures:
-    IL4_network: results/figures/Figure_4A_IL4_ceRNA_network.png
-    IL13_network: results/figures/Figure_4B_IL13_ceRNA_network.png
-    shared_network: results/figures/Figure_4C_shared_ceRNA_network.png
-    focused_network: results/figures/Figure_4D_focused_ceRNA_network.png
-  note: Curated integrated network TSV is the manuscript Figure 4D source; Figure 4 network panels are reproducible R renderings for review.
+    Figure_1A_miRNA_overlap: results/figures/Figure_1A_miRNA_overlap
+    Figure_1B_miRNA_IL4_volcano: results/figures/Figure_1B_miRNA_IL4_volcano
+    Figure_1C_miRNA_IL13_volcano: results/figures/Figure_1C_miRNA_IL13_volcano
+    Figure_2A_circRNA_overlap: results/figures/Figure_2A_circRNA_overlap
+    Figure_2B_circRNA_IL4_volcano: results/figures/Figure_2B_circRNA_IL4_volcano
+    Figure_2C_circRNA_IL13_volcano: results/figures/Figure_2C_circRNA_IL13_volcano
+    Figure_2D_circRNA_IL4_enrichment: results/figures/Figure_2D_circRNA_IL4_enrichment
+    Figure_2E_circRNA_IL13_enrichment: results/figures/Figure_2E_circRNA_IL13_enrichment
+    Figure_3A_mRNA_overlap: results/figures/Figure_3A_mRNA_overlap
+    Figure_3B_mRNA_IL4_volcano: results/figures/Figure_3B_mRNA_IL4_volcano
+    Figure_3C_mRNA_IL13_volcano: results/figures/Figure_3C_mRNA_IL13_volcano
+    Figure_3D_mRNA_IL4_enrichment: results/figures/Figure_3D_mRNA_IL4_enrichment
+    Figure_3E_mRNA_IL13_enrichment: results/figures/Figure_3E_mRNA_IL13_enrichment
+    Figure_4A_IL4_ceRNA_network: results/figures/Figure_4A_IL4_ceRNA_network
+    Figure_4B_IL13_ceRNA_network: results/figures/Figure_4B_IL13_ceRNA_network
+    Figure_4C_shared_ceRNA_network: results/figures/Figure_4C_shared_ceRNA_network
+    Figure_4D_focused_ceRNA_network: results/figures/Figure_4D_focused_ceRNA_network
+  logs:
+    miRanda_commands: results/logs/miRanda_commands.tsv
+    miRanda_input_checksums: results/logs/miRanda_input_checksums.tsv
+    miRanda_version: results/logs/miRanda_version.txt
+  session:
+    session_info: results/session/sessionInfo.txt
