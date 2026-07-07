@@ -1,23 +1,21 @@
-# Code And Data Availability
+# Code and Data Availability
 
-This repository is self-contained from compact processed counts and normalized expression matrices onward. It includes:
+This repository contains compact processed inputs, sample metadata, R scripts, configuration files, and the output-folder scaffold for the IL-4/IL-13 prostate fibroblast ceRNA analysis.
 
-- compact mRNA count matrix
-- verified miRNA CPM expression matrix
-- Arraystar normalized circRNA matrix and separate provider workbook
-- explicit sample metadata for each assay
-- final regenerated differential-expression, enrichment, miRanda, and restricted network outputs
-- figure source-data files
-- R scripts, configuration, `renv.lock`, `sessionInfo.txt`, and a one-command workflow
-
-The public statistical workflow does not use precomputed release-candidate differential-expression tables as inputs. Differential expression is recomputed from the compact matrices by `scripts/01_mrna_differential_expression.R`, `scripts/02_mirna_differential_expression.R`, and `scripts/03_circrna_differential_expression.R`.
-
-The individual featureCounts files are not included in the public release. If available locally, they can be converted into the compact mRNA count matrix with:
+The public workflow starts from compact processed matrices and recovered analysis tables, not raw FASTQ or featureCounts files. Run the workflow from the repository root with:
 
 ```sh
-Rscript scripts/00_build_mrna_count_matrix_from_featurecounts.R
+Rscript run_all.R
 ```
 
-Historical browser-based g:Profiler exports and the final Cytoscape `.cys` session were not recovered locally. Recovered restricted miRanda outputs and small historical-provenance records are included. Complete miRanda rerun remains pending complete target resources and a compatible miRanda v3.3a binary.
+The repository includes `renv.lock` for package restoration. The workflow writes session information to `results/session/sessionInfo.txt`; the included root-level `sessionInfo.txt` records the validation environment for this release.
 
-The manuscript records these deposition targets: miRNA SRA BioProject `PRJNA1425456`, mRNA SRA BioProject `PRJNA1425902`, and circRNA GEO accession `GSE324030`. Confirm final public release status and reviewer tokens before manuscript submission.
+Raw sequencing and microarray data are deposited separately at the manuscript accessions:
+
+- miRNA SRA BioProject `PRJNA1425456`
+- mRNA SRA BioProject `PRJNA1425902`
+- circRNA GEO accession `GSE324030`
+
+Reviewer tokens and accession release status should be confirmed before final manuscript submission.
+
+The repository includes the recovered miRanda prediction outputs and curated integrated network source tables used for the manuscript; de novo transcriptome-wide miRanda rerun is outside the scope of this release.

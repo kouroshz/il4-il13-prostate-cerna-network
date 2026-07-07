@@ -1,6 +1,0 @@
-superseded_or_legacy_name	current_name	reason
-IL4_exploratory_*	restricted_historical_candidate_IL4_*	Current names explicitly state restricted historical miRanda coverage.
-IL13_exploratory_*	restricted_historical_candidate_IL13_*	Current names explicitly state restricted historical miRanda coverage.
-strict_shared_*	restricted_historical_candidate_strict_shared_*	Current names explicitly state restricted historical miRanda coverage.
-fibrosis_focused_*	restricted_historical_fibrosis_candidate_*	Current names explicitly state restricted historical miRanda coverage.
-FDR_provenance_*	FDR_restricted_provenance_*	Current names explicitly state restricted historical miRanda coverage.

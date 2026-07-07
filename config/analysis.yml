@@ -11,7 +11,7 @@ thresholds:
 
 significance_classes:
   nominal_discovery_mrna_circrna: assay-specific nominal P < 0.05 and absolute fold change >= 1.5
-  nominal_discovery_mirna: nominal two-sided Welch-test P < 0.05; candidate prioritization additionally uses directionality, integrated-network relevance, and experimental suitability
+  nominal_discovery_mirna: nominal two-sided Welch-test P < 0.05; prioritization additionally uses directionality, integrated-network relevance, and experimental suitability
   FDR_significant_mrna_circrna: Benjamini-Hochberg FDR < 0.05 and absolute fold change >= 1.5
   FDR_significant_mirna: Benjamini-Hochberg FDR < 0.05
   biologically_prioritized: selected using direction, predicted interaction, biological and fibrosis relevance, and suitability for experimental testing
@@ -38,7 +38,11 @@ samples:
 
 mRNA:
   compact_count_matrix: data/processed/mrna/all_counts.xlsx
-  final_output_dir: data/processed/final/mrna
+  differential_expression_table: results/tables/Table_S3_mRNA_differential_expression.tsv
+  figures:
+    overlap: results/figures/Figure_3A_mRNA_overlap.png
+    IL4_volcano: results/figures/Figure_3B_mRNA_IL4_volcano.png
+    IL13_volcano: results/figures/Figure_3C_mRNA_IL13_volcano.png
   model: edgeR GLM likelihood-ratio test
   normalization: TMM
   filtering: CPM > 1 in at least two samples
@@ -46,7 +50,11 @@ mRNA:
 
 miRNA:
   expression_matrix: data/processed/mirna/Expression_Browser_CPM.csv
-  final_output_dir: data/processed/final/mirna
+  differential_expression_table: results/tables/Table_S1_miRNA_differential_expression.tsv
+  figures:
+    overlap: results/figures/Figure_1A_miRNA_overlap.png
+    IL4_volcano: results/figures/Figure_1B_miRNA_IL4_volcano.png
+    IL13_volcano: results/figures/Figure_1C_miRNA_IL13_volcano.png
   transformation: log2(CPM + 1)
   test: two-sided Welch t-test
   contrast_direction: Treatment minus Vehicle
@@ -57,7 +65,11 @@ circRNA:
     IL4_vs_Vehicle: data/processed/circrna/circRNA_original_IL4_vs_Vehicle_DEG.tsv
     IL13_vs_Vehicle: data/processed/circrna/circRNA_original_IL13_vs_Vehicle_DEG.tsv
   provider_workbook: data/processed/circrna/Differentially_Expressed_CircRNAs_Arraystar_provider.xlsx
-  final_output_dir: data/processed/final/circrna
+  differential_expression_table: results/tables/Table_S2_circRNA_differential_expression.tsv
+  figures:
+    overlap: results/figures/Figure_2A_circRNA_overlap.png
+    IL4_volcano: results/figures/Figure_2B_circRNA_IL4_volcano.png
+    IL13_volcano: results/figures/Figure_2C_circRNA_IL13_volcano.png
   final_manuscript_source: recovered original circRNA DEG tables
   internal_check_model: limma empirical Bayes
   input_scale: normalized log2 expression
@@ -81,16 +93,17 @@ miRanda:
   target_sequences: data/processed/miranda_inputs/all_3putr_circ.fa.txt
   precomputed_outputs: data/processed/miranda_outputs
   require_mature_mirna_rna_bases: true
-  coverage_scope: restricted historical selected fibrosis-related mRNA 3-prime UTR and circRNA target FASTA
-  complete_run_status: pending complete human mRNA 3-prime UTR resource and executable miRanda v3.3a binary
+  coverage_scope: focused selected fibrosis-related mRNA 3-prime UTR and circRNA target FASTA
+  complete_run_status: de novo transcriptome-wide rerun is outside the scope of this release
 
 networks:
-  canonical_scope: curated integrated IL-4/IL-13 fibrosis-focused candidate network
-  curated_integrated_network: data/processed/final/integrated_ceRNA_network_curated.tsv
-  supplementary_table_x: results/final/source_data/Supplementary_Table_integrated_ceRNA_network.tsv
-  treatment_specific_tables:
-    - data/processed/final/networks/restricted_historical_candidate_IL4_edges.tsv
-    - data/processed/final/networks/restricted_historical_candidate_IL13_edges.tsv
-  strict_shared_table: data/processed/final/networks/restricted_historical_candidate_strict_shared_edges.tsv
-  candidate_table: data/processed/final/networks/biologically_prioritized_candidate_edges.tsv
-  note: Curated integrated network TSV is the manuscript Figure 4D source; restricted historical R network tables are supporting provenance layers, not complete transcriptome-wide maps.
+  canonical_scope: revised current IL-4/IL-13 fibrosis-focused ceRNA network
+  curated_integrated_network: data/processed/network/integrated_ceRNA_network_curated.tsv
+  integrated_table: results/tables/Table_S5_integrated_ceRNA_network.tsv
+  prioritized_axes_table: results/tables/Table_S6_prioritized_axes_miRanda_scores.tsv
+  figures:
+    IL4_network: results/figures/Figure_4A_IL4_ceRNA_network.png
+    IL13_network: results/figures/Figure_4B_IL13_ceRNA_network.png
+    shared_network: results/figures/Figure_4C_shared_ceRNA_network.png
+    focused_network: results/figures/Figure_4D_focused_ceRNA_network.png
+  note: Curated integrated network TSV is the manuscript Figure 4D source; Figure 4 network panels are reproducible R renderings for review.

@@ -4,6 +4,16 @@
 .Rproj.user/
 renv/library/
 data/raw/
+data/processed/final/
+results/final/
+results/tables/*
+!results/tables/.gitkeep
+results/figures/*
+!results/figures/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+results/session/*
+!results/session/.gitkeep
 results/tmp/
 *.log
 docs/_site/

@@ -1,3 +1,0 @@
-assay	treatment	analysis_id	input_gene_count	background_gene_count	significant_terms
-mRNA-seq	IL4	mRNA_IL4_vs_Vehicle_up_nominal	385	13997	68
-mRNA-seq	IL13	mRNA_IL13_vs_Vehicle_up_nominal	359	14013	44

@@ -1,5 +1,0 @@
-comparison	query	target	command	score_threshold	energy_cutoff
-IL4_down	IL4_vs_V_miRNA_down_seq.fa	all_3putr_circ.fa.txt	miranda IL4_vs_V_miRNA_down_seq.fa all_3putr_circ.fa.txt -sc 140	140	miRanda default shown in historical output: Energy Threshold 1.000000 kcal/mol
-IL4_up	IL4_vs_V_miRNA_up_seq.fa	all_3putr_circ.fa.txt	miranda IL4_vs_V_miRNA_up_seq.fa all_3putr_circ.fa.txt -sc 140	140	miRanda default shown in historical output: Energy Threshold 1.000000 kcal/mol
-IL13_down	IL13_vs_V_miRNA_down_seq.fa	all_3putr_circ.fa.txt	miranda IL13_vs_V_miRNA_down_seq.fa all_3putr_circ.fa.txt -sc 140	140	miRanda default shown in historical output: Energy Threshold 1.000000 kcal/mol
-IL13_up	IL13_vs_V_miRNA_up_seq.fa	all_3putr_circ.fa.txt	miranda IL13_vs_V_miRNA_up_seq.fa all_3putr_circ.fa.txt -sc 140	140	miRanda default shown in historical output: Energy Threshold 1.000000 kcal/mol

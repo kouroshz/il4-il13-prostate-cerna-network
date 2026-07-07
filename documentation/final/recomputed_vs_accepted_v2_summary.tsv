@@ -1,7 +1,0 @@
-assay	contrast	features_compared	within_tolerance	outside_tolerance	max_abs_log2FC_difference	max_abs_P_difference	max_abs_FDR_difference	explanation
-circRNA microarray	IL13_vs_Vehicle	13135	13135	0	0	0	0	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.
-circRNA microarray	IL4_vs_Vehicle	13135	13135	0	0	0	0	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.
-mRNA-seq	IL13_vs_Vehicle	14013	14013	0	0	0	0	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.
-mRNA-seq	IL4_vs_Vehicle	13997	13997	0	0	0	0	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.
-miRNA-seq	IL13_vs_Vehicle	1103	1103	0	0	9.99200722162641e-16	9.99200722162641e-16	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.
-miRNA-seq	IL4_vs_Vehicle	1103	1103	0	0	0	0	Compact public summary of internal recomputed_vs_accepted_v2.tsv; full validation table retained outside github_release.

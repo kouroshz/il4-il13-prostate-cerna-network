@@ -1,6 +1,6 @@
 # Data Directory
 
-This directory contains compact processed inputs and regenerated final outputs.
+This directory contains compact processed inputs required by the public workflow.
 
 ## Included Inputs
 
@@ -12,18 +12,14 @@ This directory contains compact processed inputs and regenerated final outputs.
 - `processed/circrna/CircRNA_normalized_Data_KZ.xlsx`: Arraystar normalized circRNA log2 expression matrix.
 - `processed/circrna/circRNA_original_IL4_vs_Vehicle_DEG.tsv`: recovered original IL-4-versus-Vehicle circRNA DEG table used as the Figure 2 source.
 - `processed/circrna/circRNA_original_IL13_vs_Vehicle_DEG.tsv`: recovered original IL-13-versus-Vehicle circRNA DEG table used as the Figure 2 source.
-- `processed/circrna/Differentially_Expressed_CircRNAs_Arraystar_provider.xlsx`: Arraystar provider differential-expression subset retained as separate provenance.
-- `processed/miranda_inputs/`: recovered restricted miRanda input FASTA files.
-- `processed/miranda_outputs/`: recovered restricted miRanda output files.
+- `processed/circrna/Differentially_Expressed_CircRNAs_Arraystar_provider.xlsx`: Arraystar provider differential-expression subset retained as a supporting check input.
+- `processed/miranda_inputs/`: recovered miRanda input FASTA files.
+- `processed/miranda_outputs/`: recovered miRanda output files.
+- `processed/network/integrated_ceRNA_network_curated.tsv`: compact curated integrated ceRNA network input.
 
-## Generated Final Outputs
+## Generated Outputs
 
-- `processed/final/mrna/`: final edgeR mRNA differential-expression tables and summaries.
-- `processed/final/mirna/`: final miRNA Welch-test tables, overlaps, and miR-140-3p values.
-- `processed/final/circrna/`: final recovered-original circRNA tables plus provider/limma provenance tables.
-- `processed/final/enrichment_inputs/`: exact gprofiler2 input and background lists.
-- `processed/final/miranda/`: copied miRanda inputs, focused pending input, and parsed predictions.
-- `processed/final/networks/`: canonical restricted network node and edge tables.
+Generated workflow outputs are written under `results/tables/`, `results/figures/`, `results/logs/`, and `results/session/`. Those folders are kept empty in the repository except for `.gitkeep` placeholders.
 
 ## Excluded Raw Files
 

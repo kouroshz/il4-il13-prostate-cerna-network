@@ -10,4 +10,4 @@ Final recovered-original workflow counts:
 - IL-13 versus Vehicle: 42 nominal-discovery circRNAs total, all upregulated.
 - Same-direction shared circRNAs: 25 upregulated nominal-discovery circRNAs.
 
-Arraystar provider-generated differential-expression subset results and a limma reanalysis are retained separately as provenance/internal checks, not as the primary Figure 2 count source.
+Arraystar provider-generated differential-expression subset results and a limma reanalysis are retained separately as supporting checks, not as the primary Figure 2 count source.

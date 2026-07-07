@@ -2,8 +2,6 @@
 title: "Functional Enrichment"
 ---
 
-Historical GO and KEGG analyses were performed through the g:Profiler web interface. Original browser exports and settings were not recovered in the bounded local materials reviewed for this release.
-
 The final reproducible enrichment analysis uses `gprofiler2` with exact final input lists and assay-specific backgrounds.
 
 - mRNA enrichment uses unique upregulated nominal-discovery mRNAs and all genes retained for mRNA testing as background.

@@ -1,19 +1,15 @@
 #!/usr/bin/env Rscript
 
-# Final miRNA-seq differential-expression workflow.
-# Recomputes Welch-test statistics from the verified compact CPM matrix.
-# The manuscript-aligned exploratory miRNA screen uses nominal P < 0.05
-# without forcing the mRNA/circRNA 1.5-fold cutoff. Experimentally evaluated
-# candidate miRNAs are highlighted explicitly as a separate plot category.
+# Publication-facing miRNA-seq differential-expression workflow.
+# Uses log2(CPM + 1) values with two-sided Welch tests.
 
 source(file.path(getwd(), "R", "final_helpers.R"))
-load_pkgs(c("dplyr", "ggplot2", "ggrepel", "pheatmap"))
+load_pkgs(c("dplyr", "ggplot2", "ggrepel"))
 
-out_dir <- ensure_dir(p("data", "processed", "final", "mirna"))
-fig_dir <- ensure_dir(p("results", "final", "figures", "mirna"))
-src_dir <- ensure_dir(p("results", "final", "source_data", "mirna"))
+table_dir <- ensure_dir(p("results", "tables"))
+figure_dir <- ensure_dir(p("results", "figures"))
 
-candidate_mirnas <- c("hsa-miR-140-3p", "hsa-miR-135b-5p", "hsa-miR-625-3p")
+priority_mirnas <- c("hsa-miR-140-3p", "hsa-miR-135b-5p", "hsa-miR-625-3p")
 
 plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".png", out_pdf)) {
   plot_tab <- tab |>
@@ -21,10 +17,10 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
     dplyr::mutate(
       neg_log10_p = -log10(pmax(raw_p_value, .Machine$double.xmin)),
       plot_category = dplyr::case_when(
-        biologically_prioritized ~ "biologically_prioritized_tested",
-        FDR_significant ~ "FDR_significant",
-        nominal_discovery ~ "nominal_P_lt_0.05",
-        TRUE ~ "not_nominal"
+        biologically_prioritized ~ "Prioritized",
+        FDR_significant ~ "FDR < 0.05",
+        nominal_discovery ~ "P < 0.05",
+        TRUE ~ "Not nominal"
       )
     )
   labels <- dplyr::bind_rows(
@@ -43,7 +39,7 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       ggplot2::aes(log2_fold_change, neg_log10_p),
       shape = 21,
       fill = "white",
-      color = "#b2182b",
+      color = "#a33f3f",
       stroke = 0.9,
       size = 2.4,
       inherit.aes = FALSE
@@ -57,22 +53,11 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       show.legend = FALSE
     ) +
     ggplot2::scale_color_manual(
-      values = c(
-        biologically_prioritized_tested = "#b2182b",
-        FDR_significant = "#1b7837",
-        nominal_P_lt_0.05 = "#2166ac",
-        not_nominal = "grey70"
-      ),
-      breaks = c("biologically_prioritized_tested", "FDR_significant", "nominal_P_lt_0.05", "not_nominal")
+      values = c("Prioritized" = "#a33f3f", "FDR < 0.05" = "#3f7f5f", "P < 0.05" = "#416f9f", "Not nominal" = "grey70"),
+      breaks = c("Prioritized", "FDR < 0.05", "P < 0.05", "Not nominal")
     ) +
-    ggplot2::labs(
-      title = title,
-      x = "log2 fold change (Treatment - Vehicle)",
-      y = "-log10 nominal P",
-      color = "Status"
-    ) +
+    ggplot2::labs(title = title, x = "log2 fold change (Treatment - Vehicle)", y = "-log10 nominal P", color = "Status") +
     ggplot2::theme_bw(base_size = 10)
-  ensure_dir(dirname(out_pdf))
   ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2)
   ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300)
   invisible(g)
@@ -83,20 +68,6 @@ safe_ttest <- function(x, y) {
     if (length(stats::na.omit(x)) < 2 || length(stats::na.omit(y)) < 2) return(NA_real_)
     stats::t.test(x, y, alternative = "two.sided", var.equal = FALSE)$p.value
   }, error = function(e) NA_real_)
-}
-
-summarise_counts <- function(tab, contrast) {
-  dplyr::tibble(
-    assay = "miRNA-seq",
-    contrast = contrast,
-    total_features = nrow(tab),
-    nominal_discovery = sum(tab$nominal_discovery, na.rm = TRUE),
-    nominal_up = sum(tab$nominal_discovery & tab$direction == "up", na.rm = TRUE),
-    nominal_down = sum(tab$nominal_discovery & tab$direction == "down", na.rm = TRUE),
-    FDR_significant = sum(tab$FDR_significant, na.rm = TRUE),
-    FDR_up = sum(tab$FDR_significant & tab$direction == "up", na.rm = TRUE),
-    FDR_down = sum(tab$FDR_significant & tab$direction == "down", na.rm = TRUE)
-  )
 }
 
 metadata <- read_tsv(p("data", "metadata", "mirna_samples.tsv"))
@@ -114,6 +85,15 @@ cpm <- expr[, c("Name", metadata$source_column), drop = FALSE]
 names(cpm) <- c("feature_id", metadata$sample_name)
 cpm[, metadata$sample_name] <- lapply(cpm[, metadata$sample_name, drop = FALSE], as.numeric)
 cpm <- cpm[rowSums(cpm[, metadata$sample_name, drop = FALSE], na.rm = TRUE) != 0, , drop = FALSE]
+
+priority_axis <- function(feature_id) {
+  dplyr::case_when(
+    feature_id == "hsa-miR-140-3p" ~ "miR-140-3p / CEMIP / circPAPPA",
+    feature_id == "hsa-miR-135b-5p" ~ "miR-135b-5p / TNC / circLIFR",
+    feature_id == "hsa-miR-625-3p" ~ "miR-625-3p / LIFR",
+    TRUE ~ ""
+  )
+}
 
 run_contrast <- function(treatment) {
   contrast_name <- paste0(treatment, "_vs_Vehicle")
@@ -148,7 +128,7 @@ run_contrast <- function(treatment) {
     dplyr::mutate(
       BH_FDR = stats::p.adjust(raw_p_value, method = "BH"),
       assay = "miRNA-seq",
-      analysis_source = "log2_CPM_plus_1_Welch_two_sided_from_compact_CPM_matrix",
+      analysis_method = "log2_CPM_plus_1_two_sided_Welch_test",
       contrast = contrast_name,
       label_for_plot = feature_id
     )
@@ -158,53 +138,27 @@ run_contrast <- function(treatment) {
     dplyr::mutate(dplyr::across(dplyr::all_of(ordered_cols), as.numeric)) |>
     classify_de(use_log2fc_threshold = FALSE) |>
     dplyr::mutate(
-      biologically_prioritized = feature_id %in% candidate_mirnas,
-      experimentally_evaluated = feature_id %in% candidate_mirnas,
-      candidate_highlight = biologically_prioritized,
-      candidate_highlight_reason = dplyr::if_else(
-        biologically_prioritized,
-        "prioritized/tested from integrated ceRNA network; highlighted separately from nominal volcano coloring",
-        ""
-      ),
-      threshold_interpretation = dplyr::case_when(
-        biologically_prioritized & nominal_discovery ~ "biologically prioritized/tested and nominal P < 0.05",
-        biologically_prioritized ~ "biologically prioritized/tested; not a nominal discovery in this contrast",
-        nominal_discovery ~ "nominal P < 0.05 exploratory miRNA screen",
-        TRUE ~ "not nominally significant"
+      biologically_prioritized = feature_id %in% priority_mirnas,
+      experimentally_evaluated = feature_id %in% priority_mirnas,
+      prioritized_axis = priority_axis(feature_id),
+      interpretation_class = dplyr::case_when(
+        biologically_prioritized & nominal_discovery ~ "prioritized axis and nominal P < 0.05",
+        biologically_prioritized ~ "prioritized axis; not nominal in this contrast",
+        nominal_discovery ~ "nominal P < 0.05",
+        TRUE ~ "not nominal"
       )
     ) |>
     dplyr::select(
-      assay, analysis_source, contrast, feature_id, log2_fold_change, raw_p_value, BH_FDR,
+      assay, analysis_method, contrast, feature_id, log2_fold_change, raw_p_value, BH_FDR,
       direction, nominal_discovery, FDR_significant,
-      biologically_prioritized, experimentally_evaluated, candidate_highlight,
-      candidate_highlight_reason, threshold_interpretation,
+      biologically_prioritized, experimentally_evaluated, prioritized_axis, interpretation_class,
       mean_CPM_vehicle, mean_CPM_treatment,
       mean_log2_CPM_plus_1_vehicle, mean_log2_CPM_plus_1_treatment,
       dplyr::all_of(ordered_cols), label_for_plot
     )
 
-  stem <- paste0("miRNA_", contrast_name)
-  write_split_de(out, out_dir, stem)
-  write_tsv(
-    out |>
-      dplyr::transmute(
-        feature_id,
-        display_label = label_for_plot,
-        log2_fold_change,
-        raw_p_value,
-        BH_FDR,
-        nominal_discovery,
-        FDR_significant,
-        direction,
-        biologically_prioritized,
-        experimentally_evaluated,
-        candidate_highlight,
-        candidate_highlight_reason,
-        threshold_interpretation
-      ),
-    file.path(src_dir, paste0(stem, "_volcano_source_data.tsv"))
-  )
-  plot_mirna_volcano(out, paste("miRNA", contrast_name), file.path(fig_dir, paste0(stem, "_volcano.pdf")))
+  prefix <- if (treatment == "IL4") "Figure_1B_miRNA_IL4_volcano" else "Figure_1C_miRNA_IL13_volcano"
+  plot_mirna_volcano(out, paste("miRNA", treatment, "vs Vehicle"), file.path(figure_dir, paste0(prefix, ".pdf")))
   out
 }
 
@@ -213,51 +167,53 @@ all_tabs <- list(
   IL13_vs_Vehicle = run_contrast("IL13")
 )
 
-summary_counts <- dplyr::bind_rows(lapply(names(all_tabs), function(contrast) summarise_counts(all_tabs[[contrast]], contrast)))
-write_tsv(summary_counts, file.path(out_dir, "miRNA_summary_counts.tsv"))
-
-make_shared <- function(flag_col, label) {
-  x <- dplyr::inner_join(
-    dplyr::filter(all_tabs$IL4_vs_Vehicle, .data[[flag_col]]) |>
-      dplyr::select(feature_id, direction_IL4 = direction, log2FC_IL4 = log2_fold_change, P_IL4 = raw_p_value, FDR_IL4 = BH_FDR),
-    dplyr::filter(all_tabs$IL13_vs_Vehicle, .data[[flag_col]]) |>
-      dplyr::select(feature_id, direction_IL13 = direction, log2FC_IL13 = log2_fold_change, P_IL13 = raw_p_value, FDR_IL13 = BH_FDR),
-    by = "feature_id"
-  ) |>
-    dplyr::filter(direction_IL4 == direction_IL13) |>
-    dplyr::mutate(shared_direction = direction_IL4)
-  write_tsv(x, file.path(out_dir, paste0("miRNA_shared_direction_", label, ".tsv")))
-}
-make_shared("nominal_discovery", "nominal_discovery")
-make_shared("FDR_significant", "FDR_significant")
-
-all_mirnas <- dplyr::full_join(
-  all_tabs$IL4_vs_Vehicle |>
-    dplyr::select(feature_id, IL4_direction = direction, IL4_nominal = nominal_discovery, IL4_FDR_significant = FDR_significant, IL4_log2FC = log2_fold_change, IL4_P = raw_p_value, IL4_FDR = BH_FDR),
-  all_tabs$IL13_vs_Vehicle |>
-    dplyr::select(feature_id, IL13_direction = direction, IL13_nominal = nominal_discovery, IL13_FDR_significant = FDR_significant, IL13_log2FC = log2_fold_change, IL13_P = raw_p_value, IL13_FDR = BH_FDR),
-  by = "feature_id"
-)
-write_tsv(all_mirnas, file.path(out_dir, "miRNA_exact_overlap_table.tsv"))
-
-candidate_values <- dplyr::bind_rows(all_tabs) |>
-  dplyr::filter(feature_id %in% candidate_mirnas) |>
-  dplyr::mutate(
-    candidate_axis = dplyr::case_when(
-      feature_id == "hsa-miR-140-3p" ~ "miR-140-3p / CEMIP / circPAPPA",
-      feature_id == "hsa-miR-135b-5p" ~ "miR-135b-5p / TNC / circLIFR",
-      feature_id == "hsa-miR-625-3p" ~ "miR-625-3p / LIFR",
-      TRUE ~ ""
-    ),
-    experimental_status = dplyr::case_when(
-      feature_id == "hsa-miR-140-3p" ~ "strongest functional support; pursued further",
-      TRUE ~ "experimentally evaluated; negative or less supportive result"
-    )
+summary_counts <- dplyr::bind_rows(lapply(names(all_tabs), function(contrast) {
+  tab <- all_tabs[[contrast]]
+  dplyr::tibble(
+    assay = "miRNA-seq",
+    contrast = contrast,
+    total_features = nrow(tab),
+    nominal_discovery = sum(tab$nominal_discovery, na.rm = TRUE),
+    nominal_up = sum(tab$nominal_discovery & tab$direction == "up", na.rm = TRUE),
+    nominal_down = sum(tab$nominal_discovery & tab$direction == "down", na.rm = TRUE),
+    FDR_significant = sum(tab$FDR_significant, na.rm = TRUE)
   )
-write_tsv(candidate_values, file.path(out_dir, "candidate_miRNA_final_values.tsv"))
+}))
+
+shared_nominal <- dplyr::inner_join(
+  dplyr::filter(all_tabs$IL4_vs_Vehicle, nominal_discovery) |>
+    dplyr::select(feature_id, direction_IL4 = direction),
+  dplyr::filter(all_tabs$IL13_vs_Vehicle, nominal_discovery) |>
+    dplyr::select(feature_id, direction_IL13 = direction),
+  by = "feature_id"
+) |>
+  dplyr::filter(direction_IL4 == direction_IL13)
+
+expected <- c(IL4_vs_Vehicle = 45, IL13_vs_Vehicle = 28, shared_same_direction = 10)
+observed <- c(
+  IL4_vs_Vehicle = summary_counts$nominal_discovery[summary_counts$contrast == "IL4_vs_Vehicle"],
+  IL13_vs_Vehicle = summary_counts$nominal_discovery[summary_counts$contrast == "IL13_vs_Vehicle"],
+  shared_same_direction = nrow(shared_nominal)
+)
+if (!identical(as.integer(observed), as.integer(expected))) {
+  stop("miRNA count mismatch: observed ", paste(names(observed), observed, sep = "=", collapse = "; "))
+}
+
 write_tsv(
-  candidate_values |> dplyr::filter(feature_id == "hsa-miR-140-3p"),
-  file.path(out_dir, "miR_140_3p_final_values.tsv")
+  dplyr::bind_rows(all_tabs) |>
+    dplyr::arrange(contrast, raw_p_value, feature_id),
+  file.path(table_dir, "Table_S1_miRNA_differential_expression.tsv")
 )
 
-message("Final miRNA outputs recomputed from compact CPM matrix: ", out_dir)
+overlap_counts <- dplyr::tibble(
+  category = c("IL-4 nominal", "IL-13 nominal", "Shared same direction"),
+  count = as.integer(c(observed["IL4_vs_Vehicle"], observed["IL13_vs_Vehicle"], observed["shared_same_direction"]))
+)
+save_figure(
+  plot_overlap_counts(overlap_counts, "miRNA differential expression overlap", "Nominal miRNAs"),
+  "Figure_1A_miRNA_overlap",
+  width = 6.2,
+  height = 4.6
+)
+
+message("Table S1 and Figure 1A-C outputs written.")

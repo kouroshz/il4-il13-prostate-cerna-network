@@ -12,15 +12,14 @@ The workflow executes:
 
 1. mRNA differential expression from the compact count matrix.
 2. miRNA differential expression from the compact CPM matrix.
-3. circRNA differential expression from the compact normalized-expression matrix.
-4. mRNA gprofiler2 enrichment.
-5. circRNA gprofiler2 enrichment.
-6. miRanda input checksum and mature-miRNA validation.
-7. miRanda output parsing and collapsed edge export.
-8. Restricted network table construction.
-9. Network plotting.
+3. circRNA differential expression from recovered manuscript-source circRNA tables and the compact normalized-expression matrix.
+4. Combined mRNA and circRNA gprofiler2 enrichment.
+5. miRanda input checksum and mature-miRNA validation.
+6. Integrated network table export.
+7. Figure 4 ceRNA network plotting.
+8. Summary-count table generation.
 
-The expected outputs are written to `data/processed/final/`, `results/final/`, and `sessionInfo.txt`.
+The expected generated tables are `results/tables/Table_S1_*.tsv` through `results/tables/Table_S7_*.tsv`. Manuscript-numbered review figures are written to `results/figures/`; run metadata and session information are written to `results/logs/` and `results/session/`.
 
 Quarto documentation can be rendered with:
 

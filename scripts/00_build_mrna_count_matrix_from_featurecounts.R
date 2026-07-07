@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Optional provenance utility.
+# Optional source-tracking utility.
 # Reconstructs a compact mRNA count matrix from individual featureCounts files
 # when those files are available locally. The public workflow starts from the
 # compact processed mRNA, miRNA, and circRNA matrices.

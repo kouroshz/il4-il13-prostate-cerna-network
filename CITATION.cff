@@ -4,11 +4,11 @@ title: "Reproducible IL-4/IL-13 ceRNA Network Analysis"
 type: software
 authors:
   - family-names: "Macoska"
-    given-names: "Jill A."
+    given-names: "J. A."
   - family-names: "Zarringhalam"
     given-names: "Kourosh"
   - family-names: "D'Arcy"
-    given-names: "Quentin"
+    given-names: "Q."
   - family-names: "Bowen"
     given-names: "Delaney"
 repository-code: "https://github.com/REPLACE_WITH_FINAL_REPOSITORY_URL"

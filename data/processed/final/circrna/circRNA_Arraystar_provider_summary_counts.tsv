@@ -1,3 +1,0 @@
-assay	analysis_source	contrast	total_features	nominal_discovery	nominal_up	nominal_down	FDR_significant	FDR_up	FDR_down
-circRNA microarray	Arraystar_provider_DE_subset_direction_converted	IL4_vs_Vehicle	67	67	48	19	0	0	0
-circRNA microarray	Arraystar_provider_DE_subset_direction_converted	IL13_vs_Vehicle	14	14	12	2	0	0	0
