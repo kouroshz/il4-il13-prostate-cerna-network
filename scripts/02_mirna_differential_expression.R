@@ -18,7 +18,6 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       neg_log10_p = -log10(pmax(raw_p_value, .Machine$double.xmin)),
       plot_category = dplyr::case_when(
         biologically_prioritized ~ "Prioritized",
-        FDR_significant ~ "FDR < 0.05",
         nominal_discovery ~ "Nominal P < 0.05",
         TRUE ~ "Not nominal"
       )
@@ -28,7 +27,7 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
     plot_tab |>
       dplyr::filter(nominal_discovery, !biologically_prioritized) |>
       dplyr::arrange(raw_p_value) |>
-      dplyr::slice_head(n = 9)
+      dplyr::slice_head(n = 6)
   ) |>
     dplyr::distinct(feature_id, .keep_all = TRUE)
 
@@ -49,15 +48,19 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       data = labels,
       ggplot2::aes(label = label_for_plot),
       size = 2.4,
+      box.padding = 0.35,
+      point.padding = 0.25,
       max.overlaps = Inf,
       show.legend = FALSE
     ) +
     ggplot2::scale_color_manual(
-      values = c("Prioritized" = "#a33f3f", "FDR < 0.05" = "#3f7f5f", "Nominal P < 0.05" = "#416f9f", "Not nominal" = "grey70"),
-      breaks = c("Prioritized", "FDR < 0.05", "Nominal P < 0.05", "Not nominal")
+      values = c("Prioritized" = "#a33f3f", "Nominal P < 0.05" = "#416f9f", "Not nominal" = "grey70"),
+      breaks = c("Prioritized", "Nominal P < 0.05", "Not nominal")
     ) +
     ggplot2::labs(title = title, x = "log2 fold change (Treatment \u2212 Vehicle)", y = "\u2212log10 nominal P", color = "Status") +
-    ggplot2::theme_bw(base_size = 10)
+    ggplot2::coord_cartesian(clip = "off") +
+    ggplot2::theme_bw(base_size = 10) +
+    ggplot2::theme(plot.margin = ggplot2::margin(8, 18, 8, 8))
   ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2, device = grDevices::cairo_pdf)
   ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300)
   invisible(g)
@@ -205,12 +208,16 @@ write_tsv(
   file.path(table_dir, "Table_S1_miRNA_differential_expression.tsv")
 )
 
-overlap_counts <- dplyr::tibble(
-  category = c("IL-4 nominal", "IL-13 nominal", "Shared same direction"),
-  count = as.integer(c(observed["IL4_vs_Vehicle"], observed["IL13_vs_Vehicle"], observed["shared_same_direction"]))
-)
 save_figure(
-  plot_overlap_counts(overlap_counts, "miRNA differential-expression summary", "Nominal miRNAs"),
+  plot_two_set_venn(
+    title = "miRNA differential-expression summary",
+    left_label = "IL-4 nominal P < 0.05",
+    right_label = "IL-13 nominal P < 0.05",
+    left_only = as.integer(observed["IL4_vs_Vehicle"] - observed["shared_same_direction"]),
+    shared = as.integer(observed["shared_same_direction"]),
+    right_only = as.integer(observed["IL13_vs_Vehicle"] - observed["shared_same_direction"]),
+    shared_note = "Shared = same direction"
+  ),
   "Figure_1A_miRNA_overlap",
   width = 6.2,
   height = 4.6

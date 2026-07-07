@@ -108,7 +108,7 @@ run_contrast <- function(treatment) {
     paste("mRNA", treatment, "vs Vehicle"),
     file.path(figure_dir, paste0(prefix, ".pdf")),
     y_cap = 50,
-    subtitle = "visualized with \u2212log10 P capped at 50"
+    label_features = c("CEMIP", "LIFR", "TNC", "POSTN", "CCL26", "IL13RA2", "SOCS1", "CISH")
   )
   out
 }
@@ -156,12 +156,16 @@ write_tsv(
   file.path(table_dir, "Table_S3_mRNA_differential_expression.tsv")
 )
 
-overlap_counts <- dplyr::tibble(
-  category = c("IL-4 regulated", "IL-13 regulated", "Shared same direction"),
-  count = as.integer(c(observed["IL4_vs_Vehicle"], observed["IL13_vs_Vehicle"], observed["shared_same_direction"]))
-)
 save_figure(
-  plot_overlap_counts(overlap_counts, "mRNA differential-expression summary", "Nominally regulated genes"),
+  plot_two_set_venn(
+    title = "mRNA differential-expression summary",
+    left_label = "IL-4 nominally regulated",
+    right_label = "IL-13 nominally regulated",
+    left_only = as.integer(observed["IL4_vs_Vehicle"] - observed["shared_same_direction"]),
+    shared = as.integer(observed["shared_same_direction"]),
+    right_only = as.integer(observed["IL13_vs_Vehicle"] - observed["shared_same_direction"]),
+    shared_note = "Shared = same direction"
+  ),
   "Figure_3A_mRNA_overlap",
   width = 6.2,
   height = 4.6

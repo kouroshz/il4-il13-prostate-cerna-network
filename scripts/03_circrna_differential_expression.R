@@ -46,8 +46,7 @@ circ_label <- function(alias, feature_id, gene_symbol) {
   relevant <- gene_symbol %in% c("CEMIP", "LIFR", "TNC", "PAPPA")
   dplyr::case_when(
     relevant ~ paste0("circ", gene_symbol),
-    !is.na(alias) & nzchar(alias) ~ alias,
-    TRUE ~ feature_id
+    TRUE ~ ""
   )
 }
 
@@ -117,10 +116,15 @@ run_contrast <- function(treatment) {
       dplyr::all_of(ordered_cols),
       source, chrom, strand, txStart, txEnd, best_transcript, circRNA_length,
       label_for_plot, source_input_file
-    )
+  )
 
   prefix <- if (treatment == "IL4") "Figure_2B_circRNA_IL4_volcano" else "Figure_2C_circRNA_IL13_volcano"
-  plot_volcano(out, paste("circRNA", treatment, "vs Vehicle"), file.path(figure_dir, paste0(prefix, ".pdf")), label_n = 8)
+  plot_volcano(
+    out,
+    paste("circRNA", treatment, "vs Vehicle"),
+    file.path(figure_dir, paste0(prefix, ".pdf")),
+    label_features = c("circPAPPA", "circLIFR", "circTNC", "circCEMIP")
+  )
   out
 }
 
@@ -169,12 +173,17 @@ write_tsv(
   file.path(table_dir, "Table_S2_circRNA_differential_expression.tsv")
 )
 
-overlap_counts <- dplyr::tibble(
-  category = c("IL-4 up", "IL-4 down", "IL-13 up", "IL-13 down", "Shared up"),
-  count = as.integer(observed)
-)
 save_figure(
-  plot_overlap_counts(overlap_counts, "circRNA differential-expression summary", "Nominal circRNAs"),
+  plot_two_set_venn(
+    title = "circRNA differential-expression summary",
+    left_label = "IL-4 upregulated",
+    right_label = "IL-13 upregulated",
+    left_only = as.integer(observed["IL4_up"] - observed["shared_up"]),
+    shared = as.integer(observed["shared_up"]),
+    right_only = as.integer(observed["IL13_up"] - observed["shared_up"]),
+    shared_note = "Shared upregulated",
+    bottom_note = paste0("Downregulated circRNAs: IL-4 = ", observed["IL4_down"], "; IL-13 = ", observed["IL13_down"])
+  ),
   "Figure_2A_circRNA_overlap",
   width = 7.2,
   height = 4.6

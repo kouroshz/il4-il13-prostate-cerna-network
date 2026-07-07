@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Publication-facing enrichment workflow for mRNA and circRNA results.
+# Publication-facing enrichment workflow for mRNA results.
 
 source(file.path(getwd(), "R", "final_helpers.R"))
 load_pkgs(c("dplyr", "ggplot2"), required = TRUE)
@@ -99,7 +99,7 @@ plot_enrichment <- function(tab, title, stem) {
 mrna <- read_tsv(p("results", "tables", "Table_S3_mRNA_differential_expression.tsv"))
 circrna <- read_tsv(p("results", "tables", "Table_S2_circRNA_differential_expression.tsv"))
 
-analyses <- list(
+manuscript_analyses <- list(
   list(
     assay = "mRNA-seq",
     contrast = "IL4_vs_Vehicle",
@@ -117,7 +117,10 @@ analyses <- list(
     background = mrna |> dplyr::filter(contrast == "IL13_vs_Vehicle") |> dplyr::pull(feature_id),
     figure = "Figure_3E_mRNA_IL13_enrichment",
     title = "mRNA IL-13 upregulated gene enrichment"
-  ),
+  )
+)
+
+diagnostic_analyses <- list(
   list(
     assay = "circRNA microarray",
     contrast = "IL4_vs_Vehicle",
@@ -134,16 +137,26 @@ analyses <- list(
   )
 )
 
-results <- lapply(analyses, function(x) {
+manuscript_results <- lapply(manuscript_analyses, function(x) {
   tab <- run_enrichment(x$query, x$background, x$assay, x$contrast, x$analysis_id)
-  if (!is.null(x$figure)) plot_enrichment(tab, x$title, x$figure)
+  plot_enrichment(tab, x$title, x$figure)
   tab
 })
 
+diagnostic_results <- lapply(diagnostic_analyses, function(x) {
+  run_enrichment(x$query, x$background, x$assay, x$contrast, x$analysis_id)
+})
+
 write_tsv(
-  dplyr::bind_rows(results) |>
+  dplyr::bind_rows(manuscript_results) |>
     dplyr::arrange(assay, contrast, p_value, term_name),
   file.path(table_dir, "Table_S4_enrichment_results.tsv")
 )
 
-message("Table S4 and Figure 3D-E outputs written.")
+write_tsv(
+  dplyr::bind_rows(diagnostic_results) |>
+    dplyr::arrange(assay, contrast, p_value, term_name),
+  p("results", "logs", "circRNA_host_gene_enrichment_diagnostics.tsv")
+)
+
+message("Table S4, Figure 3D-E, and circRNA enrichment diagnostics written.")

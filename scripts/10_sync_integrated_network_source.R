@@ -14,35 +14,64 @@ if (!file.exists(network_tsv)) {
 network <- read_tsv(network_tsv)
 required <- c(
   "miRNA", "target", "score", "hyb_energy", "target_type", "gene_symbol",
-  "coordinate_status", "coordinate_interpretation"
+  "prioritized_axis", "figure4D_focus", "experimentally_evaluated", "experimental_result"
 )
 missing <- setdiff(required, names(network))
 if (length(missing)) stop("Curated integrated network is missing required columns: ", paste(missing, collapse = ", "))
 
-write_tsv(
-  network |>
-    dplyr::arrange(miRNA, target_type, target),
-  file.path(table_dir, "Table_S5_integrated_ceRNA_network.tsv")
-)
+clean_text <- function(x) {
+  x <- as.character(x)
+  x[is.na(x)] <- ""
+  x
+}
 
-priority_axes <- network |>
-  dplyr::filter(!is.na(prioritized_axis), nzchar(prioritized_axis)) |>
+public_experimental_result <- function(axis, target_type, evaluated) {
+  axis <- clean_text(axis)
+  evaluated <- clean_text(evaluated)
+  dplyr::case_when(
+    axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "mRNA" ~
+      "strongest functional support; pursued further",
+    axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "circRNA" ~
+      "predicted circRNA partner; circPAPPA knockdown did not significantly alter CEMIP under tested conditions",
+    evaluated == "yes" & nzchar(axis) ~
+      "experimentally evaluated under the tested conditions",
+    TRUE ~ ""
+  )
+}
+
+network_public <- network |>
   dplyr::transmute(
-    prioritized_axis,
     miRNA,
     target,
     target_type,
     gene_symbol,
     miRanda_score = score,
     hybridization_energy = hyb_energy,
-    coordinate_status,
+    prioritized_axis = clean_text(prioritized_axis),
+    figure4D_focus = clean_text(figure4D_focus),
+    experimentally_evaluated = clean_text(experimentally_evaluated),
+    experimental_result = public_experimental_result(prioritized_axis, target_type, experimentally_evaluated)
+  )
+
+write_tsv(
+  network_public |>
+    dplyr::arrange(miRNA, target_type, target),
+  file.path(table_dir, "Table_S5_integrated_ceRNA_network.tsv")
+)
+
+priority_axes <- network_public |>
+  dplyr::filter(nzchar(prioritized_axis)) |>
+  dplyr::transmute(
+    prioritized_axis,
+    miRNA,
+    target,
+    target_type,
+    gene_symbol,
+    miRanda_score,
+    hybridization_energy,
     experimentally_evaluated,
     experimental_result,
-    interpretation = dplyr::case_when(
-      prioritized_axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "mRNA" ~ "primary biologically prioritized and experimentally supported edge",
-      prioritized_axis == "miR-140-3p / CEMIP / circPAPPA" & target_type == "circRNA" ~ "predicted circRNA partner; functional support not established if knockdown remains negative",
-      TRUE ~ "additional experimentally evaluated edge with negative or less supportive result"
-    )
+    interpretation = experimental_result
   ) |>
   dplyr::arrange(prioritized_axis, target_type, target)
 write_tsv(priority_axes, file.path(table_dir, "Table_S6_prioritized_axes_miRanda_scores.tsv"))
