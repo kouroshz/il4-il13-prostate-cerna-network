@@ -24,10 +24,17 @@ This repository contains code, compact processed inputs, and a reproducible work
 
 ## Reproducibility
 
-Restore the R environment:
+From a fresh clone:
 
 ```sh
-Rscript -e 'install.packages("renv"); renv::restore()'
+git clone https://github.com/kouroshz/il4-il13-prostate-cerna-network.git
+cd il4-il13-prostate-cerna-network
+```
+
+Restore the R environment with a noninteractive CRAN mirror:
+
+```sh
+Rscript -e 'options(repos = c(CRAN = "https://cloud.r-project.org")); if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv"); renv::restore(prompt = FALSE)'
 ```
 
 Run the workflow:
