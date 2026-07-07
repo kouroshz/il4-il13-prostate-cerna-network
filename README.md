@@ -53,8 +53,23 @@ make run
 
 The workflow generates:
 
-- manuscript-numbered figure files in `results/figures/`
 - supplementary/source tables in `results/tables/`
+- manuscript-numbered figure files in `results/figures/`:
+  - `Figure_1A_miRNA_overlap`
+  - `Figure_1B_miRNA_IL4_volcano`
+  - `Figure_1C_miRNA_IL13_volcano`
+  - `Figure_2A_circRNA_overlap`
+  - `Figure_2B_circRNA_IL4_volcano`
+  - `Figure_2C_circRNA_IL13_volcano`
+  - `Figure_3A_mRNA_overlap`
+  - `Figure_3B_mRNA_IL4_volcano`
+  - `Figure_3C_mRNA_IL13_volcano`
+  - `Figure_3D_mRNA_IL4_enrichment`
+  - `Figure_3E_mRNA_IL13_enrichment`
+  - `Figure_4A_IL4_ceRNA_network`
+  - `Figure_4B_IL13_ceRNA_network`
+  - `Figure_4C_shared_ceRNA_network`
+  - `Figure_4D_focused_ceRNA_network`
 - logs in `results/logs/`
 - session information in `results/session/`
 

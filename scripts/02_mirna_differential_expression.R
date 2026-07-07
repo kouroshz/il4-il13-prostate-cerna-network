@@ -19,7 +19,7 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       plot_category = dplyr::case_when(
         biologically_prioritized ~ "Prioritized",
         FDR_significant ~ "FDR < 0.05",
-        nominal_discovery ~ "P < 0.05",
+        nominal_discovery ~ "Nominal P < 0.05",
         TRUE ~ "Not nominal"
       )
     )
@@ -53,12 +53,12 @@ plot_mirna_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".p
       show.legend = FALSE
     ) +
     ggplot2::scale_color_manual(
-      values = c("Prioritized" = "#a33f3f", "FDR < 0.05" = "#3f7f5f", "P < 0.05" = "#416f9f", "Not nominal" = "grey70"),
-      breaks = c("Prioritized", "FDR < 0.05", "P < 0.05", "Not nominal")
+      values = c("Prioritized" = "#a33f3f", "FDR < 0.05" = "#3f7f5f", "Nominal P < 0.05" = "#416f9f", "Not nominal" = "grey70"),
+      breaks = c("Prioritized", "FDR < 0.05", "Nominal P < 0.05", "Not nominal")
     ) +
-    ggplot2::labs(title = title, x = "log2 fold change (Treatment - Vehicle)", y = "-log10 nominal P", color = "Status") +
+    ggplot2::labs(title = title, x = "log2 fold change (Treatment \u2212 Vehicle)", y = "\u2212log10 nominal P", color = "Status") +
     ggplot2::theme_bw(base_size = 10)
-  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2)
+  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2, device = grDevices::cairo_pdf)
   ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300)
   invisible(g)
 }
@@ -210,7 +210,7 @@ overlap_counts <- dplyr::tibble(
   count = as.integer(c(observed["IL4_vs_Vehicle"], observed["IL13_vs_Vehicle"], observed["shared_same_direction"]))
 )
 save_figure(
-  plot_overlap_counts(overlap_counts, "miRNA differential expression overlap", "Nominal miRNAs"),
+  plot_overlap_counts(overlap_counts, "miRNA differential-expression summary", "Nominal miRNAs"),
   "Figure_1A_miRNA_overlap",
   width = 6.2,
   height = 4.6

@@ -120,7 +120,7 @@ plot_placeholder <- function(title, stem) {
   save_figure(g, stem, width = 7, height = 5)
 }
 
-plot_network <- function(edges, title, stem) {
+plot_network <- function(edges, title, stem, focus_nodes = character()) {
   if (!nrow(edges)) {
     plot_placeholder(title, stem)
     return(invisible(NULL))
@@ -140,20 +140,21 @@ plot_network <- function(edges, title, stem) {
     dplyr::group_by(name) |>
     dplyr::summarise(node_type = dplyr::first(node_type), .groups = "drop")
   g <- igraph::graph_from_data_frame(graph_edges |> dplyr::select(from, to), directed = TRUE, vertices = node_types)
-  colors <- c(miRNA = "#9f4f5f", mRNA = "#4f7f9f", circRNA = "#6f8f5f")
+  colors <- c(miRNA = "#2f6db3", mRNA = "#2e8b57", circRNA = "#e69f00")
   vertex_colors <- colors[igraph::V(g)$node_type]
   vertex_colors[is.na(vertex_colors)] <- "grey75"
+  focus_present <- igraph::V(g)$name %in% focus_nodes
   set.seed(14013)
   layout <- igraph::layout_with_fr(g)
   plot_one <- function() {
     plot(
       g,
       layout = layout,
-      vertex.size = 8,
-      vertex.label.cex = 0.62,
+      vertex.size = ifelse(focus_present, 12, 8),
+      vertex.label.cex = ifelse(focus_present, 0.82, 0.62),
       vertex.label.color = "grey10",
       vertex.color = vertex_colors,
-      vertex.frame.color = "white",
+      vertex.frame.color = ifelse(focus_present, "grey10", "white"),
       edge.arrow.size = 0.28,
       edge.color = "grey60",
       main = title
@@ -168,9 +169,11 @@ plot_network <- function(edges, title, stem) {
   grDevices::dev.off()
 }
 
+focus_nodes <- c("CEMIP", "TNC", "LIFR", "circPAPPA", "circTNC", "circLIFR", "miR-140-3p", "miR-135b-5p", "miR-625-3p")
+
 plot_network(edges_il4, "IL-4 ceRNA network", "Figure_4A_IL4_ceRNA_network")
 plot_network(edges_il13, "IL-13 ceRNA network", "Figure_4B_IL13_ceRNA_network")
 plot_network(edges_shared, "Shared ceRNA network", "Figure_4C_shared_ceRNA_network")
-plot_network(edges_focused, "Focused integrated ceRNA network", "Figure_4D_focused_ceRNA_network")
+plot_network(edges_focused, "Focused integrated ceRNA network", "Figure_4D_focused_ceRNA_network", focus_nodes = focus_nodes)
 
 message("Figure 4A-D outputs written.")

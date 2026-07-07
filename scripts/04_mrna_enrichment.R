@@ -123,24 +123,20 @@ analyses <- list(
     contrast = "IL4_vs_Vehicle",
     analysis_id = "circRNA_IL4_up_nominal_host_genes",
     query = circrna |> dplyr::filter(contrast == "IL4_vs_Vehicle", nominal_discovery, direction == "up") |> dplyr::pull(gene_symbol),
-    background = circrna |> dplyr::filter(contrast == "IL4_vs_Vehicle") |> dplyr::pull(gene_symbol),
-    figure = "Figure_2D_circRNA_IL4_enrichment",
-    title = "circRNA IL-4 host-gene enrichment"
+    background = circrna |> dplyr::filter(contrast == "IL4_vs_Vehicle") |> dplyr::pull(gene_symbol)
   ),
   list(
     assay = "circRNA microarray",
     contrast = "IL13_vs_Vehicle",
     analysis_id = "circRNA_IL13_up_nominal_host_genes",
     query = circrna |> dplyr::filter(contrast == "IL13_vs_Vehicle", nominal_discovery, direction == "up") |> dplyr::pull(gene_symbol),
-    background = circrna |> dplyr::filter(contrast == "IL13_vs_Vehicle") |> dplyr::pull(gene_symbol),
-    figure = "Figure_2E_circRNA_IL13_enrichment",
-    title = "circRNA IL-13 host-gene enrichment"
+    background = circrna |> dplyr::filter(contrast == "IL13_vs_Vehicle") |> dplyr::pull(gene_symbol)
   )
 )
 
 results <- lapply(analyses, function(x) {
   tab <- run_enrichment(x$query, x$background, x$assay, x$contrast, x$analysis_id)
-  plot_enrichment(tab, x$title, x$figure)
+  if (!is.null(x$figure)) plot_enrichment(tab, x$title, x$figure)
   tab
 })
 
@@ -150,4 +146,4 @@ write_tsv(
   file.path(table_dir, "Table_S4_enrichment_results.tsv")
 )
 
-message("Table S4 and Figure 2D-E/3D-E outputs written.")
+message("Table S4 and Figure 3D-E outputs written.")

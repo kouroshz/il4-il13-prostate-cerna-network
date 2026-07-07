@@ -58,7 +58,7 @@ copy_if_newer <- function(from, to) {
 
 save_figure <- function(plot, stem, width = 6.5, height = 5.0, dpi = 300) {
   figure_dir <- ensure_dir(p("results", "figures"))
-  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".pdf")), plot, width = width, height = height)
+  ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".pdf")), plot, width = width, height = height, device = grDevices::cairo_pdf)
   ggplot2::ggsave(file.path(figure_dir, paste0(stem, ".png")), plot, width = width, height = height, dpi = dpi)
 }
 
@@ -94,34 +94,55 @@ classify_de <- function(tab, use_log2fc_threshold = TRUE) {
     )
 }
 
-plot_volcano <- function(tab, title, out_pdf, out_png = sub("[.]pdf$", ".png", out_pdf)) {
+plot_volcano <- function(
+    tab,
+    title,
+    out_pdf,
+    out_png = sub("[.]pdf$", ".png", out_pdf),
+    y_cap = Inf,
+    subtitle = NULL,
+    label_n = 12) {
   if (!"label_for_plot" %in% names(tab)) tab$label_for_plot <- tab$feature_id
   if (!"gene_symbol" %in% names(tab)) tab$gene_symbol <- NA_character_
   plot_tab <- tab |>
     dplyr::filter(!is.na(raw_p_value), !is.na(log2_fold_change)) |>
     dplyr::mutate(
       neg_log10_p = -log10(pmax(raw_p_value, .Machine$double.xmin)),
+      plotted_neg_log10_p = pmin(neg_log10_p, y_cap),
       status = dplyr::case_when(
-        FDR_significant ~ "FDR_significant",
-        nominal_discovery ~ "nominal_discovery",
-        TRUE ~ "not_threshold"
+        FDR_significant ~ "FDR < 0.05",
+        nominal_discovery ~ "Nominal P < 0.05",
+        TRUE ~ "Not nominal"
       ),
       label_for_plot = dplyr::coalesce(label_for_plot, gene_symbol, feature_id)
     )
   labels <- plot_tab |>
-    dplyr::filter(status != "not_threshold") |>
+    dplyr::filter(status != "Not nominal") |>
     dplyr::arrange(raw_p_value) |>
-    dplyr::slice_head(n = 12)
-  g <- ggplot2::ggplot(plot_tab, ggplot2::aes(log2_fold_change, neg_log10_p, color = status)) +
+    dplyr::distinct(label_for_plot, .keep_all = TRUE) |>
+    dplyr::slice_head(n = label_n)
+  g <- ggplot2::ggplot(plot_tab, ggplot2::aes(log2_fold_change, plotted_neg_log10_p, color = status)) +
     ggplot2::geom_point(alpha = 0.65, size = 1.2) +
     ggplot2::geom_vline(xintercept = c(-threshold_log2fc, threshold_log2fc), linetype = "dashed", color = "grey40") +
     ggplot2::geom_hline(yintercept = -log10(0.05), linetype = "dashed", color = "grey40") +
     ggrepel::geom_text_repel(data = labels, ggplot2::aes(label = label_for_plot), size = 2.4, max.overlaps = Inf, show.legend = FALSE) +
-    ggplot2::scale_color_manual(values = c(FDR_significant = "#1b7837", nominal_discovery = "#2166ac", not_threshold = "grey70")) +
-    ggplot2::labs(title = title, x = "log2 fold change (Treatment - Vehicle)", y = "-log10 nominal P", color = "Status") +
+    ggplot2::scale_color_manual(
+      values = c("FDR < 0.05" = "#1b7837", "Nominal P < 0.05" = "#2166ac", "Not nominal" = "grey70"),
+      breaks = c("FDR < 0.05", "Nominal P < 0.05", "Not nominal")
+    ) +
+    ggplot2::labs(
+      title = title,
+      subtitle = subtitle,
+      x = "log2 fold change (Treatment \u2212 Vehicle)",
+      y = "\u2212log10 nominal P",
+      color = "Status"
+    ) +
     ggplot2::theme_bw(base_size = 10)
+  if (is.finite(y_cap)) {
+    g <- g + ggplot2::scale_y_continuous(limits = c(0, y_cap), expand = ggplot2::expansion(mult = c(0, 0.03)))
+  }
   ensure_dir(dirname(out_pdf))
-  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2)
+  ggplot2::ggsave(out_pdf, g, width = 6.5, height = 5.2, device = grDevices::cairo_pdf)
   ggplot2::ggsave(out_png, g, width = 6.5, height = 5.2, dpi = 300)
   invisible(g)
 }

@@ -42,6 +42,15 @@ read_original_deg <- function(treatment) {
     dplyr::distinct(circRNA, .keep_all = TRUE)
 }
 
+circ_label <- function(alias, feature_id, gene_symbol) {
+  relevant <- gene_symbol %in% c("CEMIP", "LIFR", "TNC", "PAPPA")
+  dplyr::case_when(
+    relevant ~ paste0("circ", gene_symbol),
+    !is.na(alias) & nzchar(alias) ~ alias,
+    TRUE ~ feature_id
+  )
+}
+
 run_contrast <- function(treatment) {
   contrast_name <- paste0(treatment, "_vs_Vehicle")
   meta <- metadata |>
@@ -95,7 +104,7 @@ run_contrast <- function(treatment) {
         !is.na(log2_fold_change) & abs(log2_fold_change) >= threshold_log2fc,
       FDR_significant = !is.na(BH_FDR) & BH_FDR < 0.05 &
         !is.na(log2_fold_change) & abs(log2_fold_change) >= threshold_log2fc,
-      label_for_plot = ifelse(is.na(gene_symbol) | gene_symbol == "", feature_id, gene_symbol)
+      label_for_plot = circ_label(alias, feature_id, gene_symbol)
     )
   out$mean_log2_expr_vehicle <- rowMeans(as.matrix(out[, vehicle_cols, drop = FALSE]), na.rm = TRUE)
   out$mean_log2_expr_treatment <- rowMeans(as.matrix(out[, treatment_cols, drop = FALSE]), na.rm = TRUE)
@@ -111,7 +120,7 @@ run_contrast <- function(treatment) {
     )
 
   prefix <- if (treatment == "IL4") "Figure_2B_circRNA_IL4_volcano" else "Figure_2C_circRNA_IL13_volcano"
-  plot_volcano(out, paste("circRNA", treatment, "vs Vehicle"), file.path(figure_dir, paste0(prefix, ".pdf")))
+  plot_volcano(out, paste("circRNA", treatment, "vs Vehicle"), file.path(figure_dir, paste0(prefix, ".pdf")), label_n = 8)
   out
 }
 
@@ -165,7 +174,7 @@ overlap_counts <- dplyr::tibble(
   count = as.integer(observed)
 )
 save_figure(
-  plot_overlap_counts(overlap_counts, "circRNA differential expression overlap", "Nominal circRNAs"),
+  plot_overlap_counts(overlap_counts, "circRNA differential-expression summary", "Nominal circRNAs"),
   "Figure_2A_circRNA_overlap",
   width = 7.2,
   height = 4.6

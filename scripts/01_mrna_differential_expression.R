@@ -100,10 +100,16 @@ run_contrast <- function(treatment) {
       mean_raw_count_vehicle, mean_raw_count_treatment,
       mean_CPM_vehicle, mean_CPM_treatment,
       dplyr::starts_with("raw_count_"), dplyr::starts_with("CPM_"), label_for_plot
-    )
+  )
 
   prefix <- if (treatment == "IL4") "Figure_3B_mRNA_IL4_volcano" else "Figure_3C_mRNA_IL13_volcano"
-  plot_volcano(out, paste("mRNA", treatment, "vs Vehicle"), file.path(figure_dir, paste0(prefix, ".pdf")))
+  plot_volcano(
+    out,
+    paste("mRNA", treatment, "vs Vehicle"),
+    file.path(figure_dir, paste0(prefix, ".pdf")),
+    y_cap = 50,
+    subtitle = "visualized with \u2212log10 P capped at 50"
+  )
   out
 }
 
@@ -155,7 +161,7 @@ overlap_counts <- dplyr::tibble(
   count = as.integer(c(observed["IL4_vs_Vehicle"], observed["IL13_vs_Vehicle"], observed["shared_same_direction"]))
 )
 save_figure(
-  plot_overlap_counts(overlap_counts, "mRNA differential expression overlap", "Nominally regulated genes"),
+  plot_overlap_counts(overlap_counts, "mRNA differential-expression summary", "Nominally regulated genes"),
   "Figure_3A_mRNA_overlap",
   width = 6.2,
   height = 4.6
