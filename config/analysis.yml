@@ -76,6 +76,14 @@ analysis:
   ceRNA_network:
     method: current revised integrated ceRNA workflow
     interaction_source: miRanda-predicted miRNA-target interactions
+    miranda_version: v3.3a
+    miranda_query_example: IL4_vs_V_miRNA_down_seq.fa
+    miranda_reference: all_3putr_circ.fa.txt
+    miranda_score_rule: minimum miRanda alignment score ≥ 140
+    miranda_energy_threshold_kcal_per_mol: 1.0
+    miranda_gap_open_penalty: -9
+    miranda_gap_extend_penalty: -4
+    miranda_scaling_parameter: 4
     focused_output: prioritized axes
     de_novo_transcriptome_wide_miRanda: outside scope of this release
     mature_miRNA_sequences: RNA U bases required

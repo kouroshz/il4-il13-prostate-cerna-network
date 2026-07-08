@@ -13,7 +13,7 @@ if (!file.exists(network_tsv)) {
 
 network <- read_tsv(network_tsv)
 required <- c(
-  "miRNA", "target", "score", "hyb_energy", "target_type", "gene_symbol",
+  "miRNA", "target", "score", "hyb_energy", "gene.stp", "target_type", "gene_symbol",
   "prioritized_axis", "figure4D_focus", "experimentally_evaluated", "experimental_result"
 )
 missing <- setdiff(required, names(network))
@@ -23,6 +23,15 @@ clean_text <- function(x) {
   x <- as.character(x)
   x[is.na(x)] <- ""
   x
+}
+
+site_count_from_target_positions <- function(x) {
+  x <- clean_text(x)
+  vapply(strsplit(trimws(x), "\\s+"), function(parts) {
+    parts <- parts[nzchar(parts)]
+    if (!length(parts)) return(NA_integer_)
+    length(parts)
+  }, integer(1))
 }
 
 public_experimental_result <- function(axis, target, target_type, evaluated) {
@@ -51,7 +60,8 @@ network_public <- network |>
     target_type,
     gene_symbol,
     miRanda_score = score,
-    hybridization_energy = hyb_energy,
+    miRanda_energy = hyb_energy,
+    site_count = site_count_from_target_positions(`gene.stp`),
     prioritized_axis = clean_text(prioritized_axis),
     figure4D_focus = clean_text(figure4D_focus),
     experimentally_evaluated = clean_text(experimentally_evaluated),
@@ -73,7 +83,8 @@ priority_axes <- network_public |>
     target_type,
     gene_symbol,
     miRanda_score,
-    hybridization_energy,
+    miRanda_energy,
+    site_count,
     experimentally_evaluated,
     experimental_result,
     interpretation = experimental_result

@@ -6,3 +6,4 @@
 - circRNA enrichment figures are not generated because circRNA host-gene enrichment is not retained as a revised manuscript figure.
 - Figure 5 wet-lab validation panels are outside the scope of this computational workflow.
 - Manual PowerPoint or Illustrator polishing is acceptable if source data, labels, and counts remain unchanged.
+- ceRNA network source tables retain miRanda score, energy, and site-count information; the recovered output used minimum miRanda alignment score ≥ 140.

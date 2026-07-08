@@ -18,4 +18,4 @@ Raw sequencing and microarray data are deposited separately at the manuscript ac
 
 Reviewer tokens and accession release status should be confirmed before final manuscript submission.
 
-The repository includes the recovered miRanda prediction outputs and curated integrated network source tables used for the manuscript; de novo transcriptome-wide miRanda rerun is outside the scope of this release.
+The repository includes the recovered miRanda prediction outputs and curated integrated network source tables used for the manuscript; de novo transcriptome-wide miRanda rerun is outside the scope of this release. The recovered miRanda outputs used miRanda v3.3a with minimum alignment score ≥ 140, energy threshold 1.0 kcal/mol, gap open penalty -9, gap extend penalty -4, and scaling parameter 4.

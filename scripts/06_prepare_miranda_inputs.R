@@ -38,9 +38,21 @@ commands <- dplyr::tibble(
   comparison = c("IL4_down", "IL4_up", "IL13_down", "IL13_up"),
   query = c("IL4_vs_V_miRNA_down_seq.fa", "IL4_vs_V_miRNA_up_seq.fa", "IL13_vs_V_miRNA_down_seq.fa", "IL13_vs_V_miRNA_up_seq.fa"),
   target = "all_3putr_circ.fa.txt",
-  command = paste("miranda", query, target, "-sc 140", sep = " "),
+  recovered_output_source = c(
+    "IL4_vs_V_miRNA_down_against_3utr_circ.txt",
+    "IL4_vs_V_miRNA_up_against_3utr_circ.txt",
+    "IL13_vs_V_miRNA_down_against_3utr_circ.txt",
+    "IL13_vs_V_miRNA_up_against_3utr_circ.txt"
+  ),
+  miranda_version = "v3.3a",
+  command = paste("miranda", query, target, "-sc 140 -en 1.0 -scale 4 -go -9 -ge -4", sep = " "),
+  score_rule = "minimum miRanda alignment score \u2265 140",
   score_threshold = 140,
-  energy_setting = "miRanda default shown in recovered output: Energy Threshold 1.000000 kcal/mol"
+  energy_threshold_kcal_per_mol = 1.0,
+  gap_open_penalty = -9,
+  gap_extend_penalty = -4,
+  scaling_parameter = 4,
+  mature_miRNA_sequence_rule = "RNA sequence with U bases; T bases are not allowed in mature miRNA query FASTA"
 )
 write_tsv(commands, file.path(log_dir, "miRanda_commands.tsv"))
 

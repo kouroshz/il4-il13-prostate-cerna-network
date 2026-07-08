@@ -92,6 +92,8 @@ The generated supplementary/source tables are:
 - Enrichment: mRNA enrichment panels for Figure 3D/E.
 - ceRNA network: current revised integrated network using miRanda-predicted interactions and prioritized axes.
 
+The recovered miRanda outputs were generated with miRanda v3.3a using mature miRNA query FASTA files with RNA `U` bases, reference `all_3putr_circ.fa.txt`, gap open penalty -9, gap extend penalty -4, minimum miRanda alignment score ≥ 140, energy threshold 1.0 kcal/mol, and scaling parameter 4. Source tables retain miRanda score, energy, and site-count information; target-position-like fields from recovered miRanda output are not treated as genomic coordinates.
+
 The one-command workflow does not perform a de novo transcriptome-wide miRanda rerun. It uses the recovered miRanda outputs and curated integrated network source tables included in the repository.
 
 ## Data Availability
